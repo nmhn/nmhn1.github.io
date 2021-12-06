@@ -1,24 +1,19 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>年没怀念der博客</title>
-        <subtitle></subtitle>
-        <icon>http://example.com/images/favicon.ico</icon>
-        <link>http://example.com</link>
-        <author>
-          <name>nmhn</name>
-        </author>
-        <description></description>
-        <language>en</language>
-        <pubDate>Mon, 06 Dec 2021 19:09:47 +0800</pubDate>
-        <lastBuildDate>Mon, 06 Dec 2021 19:09:47 +0800</lastBuildDate>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/21-12-6-Database-exp-8/</guid>
-            <title>21/12/6 Database exp 8</title>
-            <link>http://example.com/2021/12/06/21-12-6-Database-exp-8/</link>
-            <category term="exp8" scheme="http://example.com/tags/exp8/" />
-            <pubDate>Mon, 06 Dec 2021 19:09:47 +0800</pubDate>
-            <description><![CDATA[ &lt;ol&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>年没怀念der博客</title>
+    <subtitle></subtitle>
+    <icon>http://example.com/images/favicon.ico</icon>
+    <link href="http://example.com" />
+    <author>
+      <name>nmhn</name>
+    </author>
+    <updated>2021-12-06T11:09:47.000Z</updated>
+    <entry>
+        <id>http://example.com/2021/12/06/21-12-6-Database-exp-8/</id>
+        <title>21/12/6 Database exp 8</title>
+        <link rel="alternate" href="http://example.com/2021/12/06/21-12-6-Database-exp-8/"/>
+        <content type="html">&lt;ol&gt;
 &lt;li&gt;
 &lt;h1 id=&#34;分析系统功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分析系统功能&#34;&gt;#&lt;/a&gt; 分析系统功能&lt;/h1&gt;
 &lt;ol&gt;
@@ -817,202 +812,8 @@ url varchar(200)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;本实验完成&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/</guid>
-            <title></title>
-            <link>http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/</link>
-            <pubDate>Mon, 06 Dec 2021 19:03:26 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;数据库的安全性&#34;&gt;&lt;a href=&#34;#数据库的安全性&#34; class=&#34;headerlink&#34; title=&#34;数据库的安全性&#34;&gt;&lt;/a&gt;数据库的安全性&lt;/h1&gt;&lt;h2 id=&#34;8-4-存取控制&#34;&gt;&lt;a href=&#34;#8-4-存取控制&#34; class=&#34;headerlink&#34; title=&#34;8.4 存取控制&#34;&gt;&lt;/a&gt;8.4 存取控制&lt;/h2&gt;&lt;h6 id=&#34;用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统&#34;&gt;&lt;a href=&#34;#用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统&#34; class=&#34;headerlink&#34; title=&#34;用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统&#34;&gt;&lt;/a&gt;用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统&lt;/h6&gt;&lt;p&gt;常用存取控制方法&lt;/p&gt;
-&lt;h4 id=&#34;自主存取控制&#34;&gt;&lt;a href=&#34;#自主存取控制&#34; class=&#34;headerlink&#34; title=&#34;自主存取控制&#34;&gt;&lt;/a&gt;自主存取控制&lt;/h4&gt;&lt;p&gt;灵活&lt;/p&gt;
-&lt;p&gt;同一用户对不同的数据对象有不同的…&lt;/p&gt;
-&lt;h5 id=&#34;授权粒度&#34;&gt;&lt;a href=&#34;#授权粒度&#34; class=&#34;headerlink&#34; title=&#34;授权粒度&#34;&gt;&lt;/a&gt;授权粒度&lt;/h5&gt;&lt;p&gt;授权的数据对象粒度&lt;/p&gt;
-&lt;p&gt;数据库,表,属性列,行…&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;实现–GRANT REVOKE&lt;/li&gt;
-&lt;li&gt;数据库角色&lt;br&gt;在用户量较大的情况下引入&lt;br&gt;定义:一组与数据库操作有关的角色&lt;br&gt;可以为具有相同权限的用户创建一个角色&lt;/li&gt;
-&lt;li&gt;权限传播&lt;br&gt;…&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;强制存取控制&#34;&gt;&lt;a href=&#34;#强制存取控制&#34; class=&#34;headerlink&#34; title=&#34;强制存取控制&#34;&gt;&lt;/a&gt;强制存取控制&lt;/h4&gt;&lt;h5 id=&#34;主体与客体&#34;&gt;&lt;a href=&#34;#主体与客体&#34; class=&#34;headerlink&#34; title=&#34;主体与客体&#34;&gt;&lt;/a&gt;主体与客体&lt;/h5&gt;&lt;h5 id=&#34;敏感度标记&#34;&gt;&lt;a href=&#34;#敏感度标记&#34; class=&#34;headerlink&#34; title=&#34;敏感度标记&#34;&gt;&lt;/a&gt;敏感度标记&lt;/h5&gt;&lt;p&gt;DBMS为每个实例指派一个敏感度标记&lt;/p&gt;
-&lt;p&gt;敏感度分为若干级别(绝密..&lt;/p&gt;
-&lt;p&gt;主体的敏感度标记称为许可证级别&lt;/p&gt;
-&lt;p&gt;客体的称为密级&lt;/p&gt;
-&lt;p&gt;MAC机制就是通过对比主体的Label和客体的Label,最终确定主体是否能够存取客体&lt;/p&gt;
-&lt;h5 id=&#34;强制存取控制规则&#34;&gt;&lt;a href=&#34;#强制存取控制规则&#34; class=&#34;headerlink&#34; title=&#34;强制存取控制规则&#34;&gt;&lt;/a&gt;强制存取控制规则&lt;/h5&gt;&lt;ol&gt;
-&lt;li&gt;读 主体许可证级别&amp;gt;=客体密级&lt;/li&gt;
-&lt;li&gt;写 主体的许可证级别=客体密级&lt;/li&gt;
-&lt;li&gt;修正规则*****&lt;ol&gt;
-&lt;li&gt;waiting for write&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;权限-只有具有合法的许可证才能存取&#34;&gt;&lt;a href=&#34;#权限-只有具有合法的许可证才能存取&#34; class=&#34;headerlink&#34; title=&#34;权限,只有具有合法的许可证才能存取&#34;&gt;&lt;/a&gt;权限,只有具有合法的许可证才能存取&lt;/h4&gt;&lt;p&gt;每一个用户被授予某一个级别的许可证&lt;/p&gt;
-&lt;p&gt;对于任意一个对象,只有具有合法的许可证才能存取&lt;/p&gt;
-&lt;h2 id=&#34;8-5-视图机制&#34;&gt;&lt;a href=&#34;#8-5-视图机制&#34; class=&#34;headerlink&#34; title=&#34;8.5 视图机制&#34;&gt;&lt;/a&gt;8.5 视图机制&lt;/h2&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</guid>
-            <title></title>
-            <link>http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</link>
-            <pubDate>Mon, 06 Dec 2021 19:03:26 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;数据库&#34;&gt;&lt;a href=&#34;#数据库&#34; class=&#34;headerlink&#34; title=&#34;数据库&#34;&gt;&lt;/a&gt;数据库&lt;/h2&gt;&lt;p&gt;select&lt;/p&gt;
-&lt;p&gt;from&lt;/p&gt;
-&lt;p&gt;where&lt;/p&gt;
-&lt;p&gt;group by&lt;/p&gt;
-&lt;p&gt;having &lt;/p&gt;
-&lt;p&gt;order by&lt;/p&gt;
-&lt;h5 id=&#34;insert&#34;&gt;&lt;a href=&#34;#insert&#34; class=&#34;headerlink&#34; title=&#34;insert&#34;&gt;&lt;/a&gt;insert&lt;/h5&gt;&lt;p&gt;指定属性列–不包含的取空&lt;/p&gt;
-&lt;p&gt;不指定-不能省略任何属性&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/</guid>
-            <title></title>
-            <link>http://example.com/2021/12/06/%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/</link>
-            <pubDate>Mon, 06 Dec 2021 19:03:26 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;查询优化&#34;&gt;&lt;a href=&#34;#查询优化&#34; class=&#34;headerlink&#34; title=&#34;查询优化&#34;&gt;&lt;/a&gt;查询优化&lt;/h1&gt;&lt;h4 id=&#34;游标&#34;&gt;&lt;a href=&#34;#游标&#34; class=&#34;headerlink&#34; title=&#34;游标&#34;&gt;&lt;/a&gt;游标&lt;/h4&gt;&lt;h6 id=&#34;目的-解决集合性操作语言与过程性操作语言的不匹配&#34;&gt;&lt;a href=&#34;#目的-解决集合性操作语言与过程性操作语言的不匹配&#34; class=&#34;headerlink&#34; title=&#34;目的-解决集合性操作语言与过程性操作语言的不匹配&#34;&gt;&lt;/a&gt;目的-解决集合性操作语言与过程性操作语言的不匹配&lt;/h6&gt;&lt;h6 id=&#34;原因-sql一条语句一般能产生或处理多条记录-而主语言一次只能存放一条记录&#34;&gt;&lt;a href=&#34;#原因-sql一条语句一般能产生或处理多条记录-而主语言一次只能存放一条记录&#34; class=&#34;headerlink&#34; title=&#34;原因:sql一条语句一般能产生或处理多条记录,而主语言一次只能存放一条记录&#34;&gt;&lt;/a&gt;原因:sql一条语句一般能产生或处理多条记录,而主语言一次只能存放一条记录&lt;/h6&gt;&lt;h6 id=&#34;是什么-是系统为用户开设的一个数据缓冲区-存放sql语句的执行结果&#34;&gt;&lt;a href=&#34;#是什么-是系统为用户开设的一个数据缓冲区-存放sql语句的执行结果&#34; class=&#34;headerlink&#34; title=&#34;是什么:是系统为用户开设的一个数据缓冲区,存放sql语句的执行结果&#34;&gt;&lt;/a&gt;是什么:是系统为用户开设的一个数据缓冲区,存放sql语句的执行结果&lt;/h6&gt;&lt;p&gt;用户可以用SQL语句逐一地从游标中获取记录,并赋给主变量&lt;/p&gt;
-&lt;h6 id=&#34;定义游标-使用Declare语句&#34;&gt;&lt;a href=&#34;#定义游标-使用Declare语句&#34; class=&#34;headerlink&#34; title=&#34;定义游标: 使用Declare语句&#34;&gt;&lt;/a&gt;定义游标: 使用Declare语句&lt;/h6&gt;&lt;p&gt;EXEC SQL DECLARE &amp;lt;&amp;gt; CURSOR……&lt;/p&gt;
-&lt;h6 id=&#34;打开游标–执行相应的select语句-吧所有满足查询条件的记录从指定表取到缓冲区中&#34;&gt;&lt;a href=&#34;#打开游标–执行相应的select语句-吧所有满足查询条件的记录从指定表取到缓冲区中&#34; class=&#34;headerlink&#34; title=&#34;打开游标–执行相应的select语句,吧所有满足查询条件的记录从指定表取到缓冲区中&#34;&gt;&lt;/a&gt;打开游标–执行相应的select语句,吧所有满足查询条件的记录从指定表取到缓冲区中&lt;/h6&gt;&lt;p&gt;EXEC SQL OPEN &amp;lt;游标名&amp;gt;&lt;/p&gt;
-&lt;p&gt;此时游标指针指向查询结果集中第一条记录之前&lt;/p&gt;
-&lt;h6 id=&#34;推动游标&#34;&gt;&lt;a href=&#34;#推动游标&#34; class=&#34;headerlink&#34; title=&#34;推动游标&#34;&gt;&lt;/a&gt;推动游标&lt;/h6&gt;&lt;p&gt;使用FETCH语句&lt;/p&gt;
-&lt;p&gt;EXEC SQL FETCH [[NEXT]]….&lt;/p&gt;
-&lt;p&gt;指定方向推动游标指针,然后将缓冲区中的当前记录取出来送至主变量供主语言进一步处理&lt;/p&gt;
-&lt;p&gt;要求:主变量与select语句中的目标列表达式具有一一对应关系&lt;/p&gt;
-&lt;h6 id=&#34;关闭游标&#34;&gt;&lt;a href=&#34;#关闭游标&#34; class=&#34;headerlink&#34; title=&#34;关闭游标&#34;&gt;&lt;/a&gt;关闭游标&lt;/h6&gt;&lt;p&gt;CLOSE语句&lt;/p&gt;
-&lt;p&gt;EXEC SQL CLOSE &amp;lt;游标名&amp;gt;&lt;/p&gt;
-&lt;h2 id=&#34;7-1查询处理过程&#34;&gt;&lt;a href=&#34;#7-1查询处理过程&#34; class=&#34;headerlink&#34; title=&#34;7.1查询处理过程&#34;&gt;&lt;/a&gt;7.1查询处理过程&lt;/h2&gt;&lt;h3 id=&#34;7-1-1-查询分析&#34;&gt;&lt;a href=&#34;#7-1-1-查询分析&#34; class=&#34;headerlink&#34; title=&#34;7.1.1 查询分析&#34;&gt;&lt;/a&gt;7.1.1 查询分析&lt;/h3&gt;&lt;p&gt;对查询语句进行扫描,词法分析和语法分析&lt;/p&gt;
-&lt;h3 id=&#34;7-1-2查询检查&#34;&gt;&lt;a href=&#34;#7-1-2查询检查&#34; class=&#34;headerlink&#34; title=&#34;7.1.2查询检查&#34;&gt;&lt;/a&gt;7.1.2查询检查&lt;/h3&gt;&lt;p&gt;根据数据字典中的用户权限和完整性约束定义对用户的存取权限进行检查&lt;/p&gt;
-&lt;p&gt;检查通过后将SQL查询语句转换成等价的&lt;u&gt;关系代数表达式&lt;/u&gt;&lt;/p&gt;
-&lt;h3 id=&#34;7-1-4查询优化&#34;&gt;&lt;a href=&#34;#7-1-4查询优化&#34; class=&#34;headerlink&#34; title=&#34;7.1.4查询优化&#34;&gt;&lt;/a&gt;7.1.4查询优化&lt;/h3&gt;&lt;p&gt;选择一个高效执行的查询处理策略&lt;/p&gt;
-&lt;h4 id=&#34;代数优化-关系代数表达式优化&#34;&gt;&lt;a href=&#34;#代数优化-关系代数表达式优化&#34; class=&#34;headerlink&#34; title=&#34;代数优化-关系代数表达式优化&#34;&gt;&lt;/a&gt;代数优化-关系代数表达式优化&lt;/h4&gt;&lt;h4 id=&#34;物理优化-存取物理介质及…的优化&#34;&gt;&lt;a href=&#34;#物理优化-存取物理介质及…的优化&#34; class=&#34;headerlink&#34; title=&#34;物理优化-存取物理介质及…的优化&#34;&gt;&lt;/a&gt;物理优化-存取物理介质及…的优化&lt;/h4&gt;&lt;h3 id=&#34;7-1-5查询执行&#34;&gt;&lt;a href=&#34;#7-1-5查询执行&#34; class=&#34;headerlink&#34; title=&#34;7.1.5查询执行&#34;&gt;&lt;/a&gt;7.1.5查询执行&lt;/h3&gt;&lt;p&gt;不用多言&lt;/p&gt;
-&lt;h2 id=&#34;7-2执行查询操作的基本算法&#34;&gt;&lt;a href=&#34;#7-2执行查询操作的基本算法&#34; class=&#34;headerlink&#34; title=&#34;7.2执行查询操作的基本算法&#34;&gt;&lt;/a&gt;7.2执行查询操作的基本算法&lt;/h2&gt;&lt;h3 id=&#34;1-选择操作&#34;&gt;&lt;a href=&#34;#1-选择操作&#34; class=&#34;headerlink&#34; title=&#34;1. 选择操作&#34;&gt;&lt;/a&gt;1. 选择操作&lt;/h3&gt;&lt;p&gt;顺序扫描/二分查找/索引[散列]/复合选择&lt;/p&gt;
-&lt;p&gt;索引–提供元组指针,间接检索&lt;/p&gt;
-&lt;p&gt;B+树索引:同样是提供元组指针,同时支持顺序集中依次查找&lt;/p&gt;
-&lt;p&gt;如是 sdept=’cs’ and sae&amp;gt;20:则&lt;/p&gt;
-&lt;p&gt;算法一:分别查询,求交集&lt;/p&gt;
-&lt;p&gt;算法而:先找到第一个查询的指针,然后在第一个查询的指针基础上进行第二个查询&lt;/p&gt;
-&lt;h3 id=&#34;2-连接操作&#34;&gt;&lt;a href=&#34;#2-连接操作&#34; class=&#34;headerlink&#34; title=&#34;2.连接操作&#34;&gt;&lt;/a&gt;2.连接操作&lt;/h3&gt;&lt;h6 id=&#34;连接操作是查询处理中最耗时的操作之一&#34;&gt;&lt;a href=&#34;#连接操作是查询处理中最耗时的操作之一&#34; class=&#34;headerlink&#34; title=&#34;连接操作是查询处理中最耗时的操作之一&#34;&gt;&lt;/a&gt;连接操作是查询处理中最耗时的操作之一&lt;/h6&gt;&lt;p&gt;[例2]&lt;/p&gt;
-&lt;p&gt;SELECT *&lt;/p&gt;
-&lt;p&gt;FROM Student,SC&lt;/p&gt;
-&lt;p&gt;WHERE Student.Sno=SC.Sno&lt;/p&gt;
-&lt;p&gt;[例2end]&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;嵌套循环法&lt;br&gt;对外层循环的每一个元组,检测内层循环中的每一个元组,检查两个元组在连接属性上是否相等&lt;br&gt;满足,即串接后作为结果输出&lt;/li&gt;
-&lt;li&gt;索引链接法&lt;br&gt;在输出表上建立属性Sno的索引(如果原来没有)&lt;br&gt;对student中每个元组,有Sno值通过Sc……..&lt;/li&gt;
-&lt;li&gt;排序合并法&lt;br&gt;适合连接的诸表已经排好序的情况&lt;br&gt;没排序则排序&lt;br&gt;取Student表中第一个sno,然后依次找sc表中具有相同sno的元组&lt;br&gt;扫到sno不相同的第一个sc元组时,返回Student扫描它的下一个元组&lt;br&gt;之后循环&lt;/li&gt;
-&lt;li&gt;散列连接法&lt;br&gt;把连接属性作为散列码,&lt;br&gt;然后划分&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;3-投影操作&#34;&gt;&lt;a href=&#34;#3-投影操作&#34; class=&#34;headerlink&#34; title=&#34;3.投影操作&#34;&gt;&lt;/a&gt;3.投影操作&lt;/h3&gt;&lt;h6 id=&#34;选取关系的某些列-从垂直的方向减小关系的大小&#34;&gt;&lt;a href=&#34;#选取关系的某些列-从垂直的方向减小关系的大小&#34; class=&#34;headerlink&#34; title=&#34;选取关系的某些列,从垂直的方向减小关系的大小&#34;&gt;&lt;/a&gt;选取关系的某些列,从垂直的方向减小关系的大小&lt;/h6&gt;&lt;p&gt;如果投影属性列包括了关系R的主键,则操作可言直接执行,操作结果将于R中元组个数相同&lt;/p&gt;
-&lt;p&gt;否则则需要消除重复元组&lt;/p&gt;
-&lt;h3 id=&#34;4-集合运算操作&#34;&gt;&lt;a href=&#34;#4-集合运算操作&#34; class=&#34;headerlink&#34; title=&#34;4.集合运算操作&#34;&gt;&lt;/a&gt;4.集合运算操作&lt;/h3&gt;&lt;p&gt;并,查,交,笛卡尔积&lt;/p&gt;
-&lt;p&gt;并查缴类似排序合并法&lt;/p&gt;
-&lt;p&gt;笛卡尔积一般嵌套循环合并&lt;/p&gt;
-&lt;h2 id=&#34;7-3关系数据库系统的查询优化&#34;&gt;&lt;a href=&#34;#7-3关系数据库系统的查询优化&#34; class=&#34;headerlink&#34; title=&#34;7.3关系数据库系统的查询优化&#34;&gt;&lt;/a&gt;7.3关系数据库系统的查询优化&lt;/h2&gt;&lt;p&gt;分布式数据库:总代接=I/O代价+*****&lt;/p&gt;
-&lt;h4 id=&#34;7-3-2查询优化实例&#34;&gt;&lt;a href=&#34;#7-3-2查询优化实例&#34; class=&#34;headerlink&#34; title=&#34;7.3.2查询优化实例&#34;&gt;&lt;/a&gt;7.3.2查询优化实例&lt;/h4&gt;&lt;p&gt;假定学生-课程数据库中有1000个学生记录,10000个选课记录&lt;/p&gt;
-&lt;p&gt;其中选修二号课程的选课记录为50个&lt;/p&gt;
-&lt;p&gt;查询选修了2号课程的学生姓名&lt;/p&gt;
-&lt;h5 id=&#34;第一种情况&#34;&gt;&lt;a href=&#34;#第一种情况&#34; class=&#34;headerlink&#34; title=&#34;第一种情况&#34;&gt;&lt;/a&gt;第一种情况&lt;/h5&gt;&lt;h6 id=&#34;1-计算广义笛卡尔积&#34;&gt;&lt;a href=&#34;#1-计算广义笛卡尔积&#34; class=&#34;headerlink&#34; title=&#34;1.计算广义笛卡尔积&#34;&gt;&lt;/a&gt;1.计算广义笛卡尔积&lt;/h6&gt;&lt;p&gt;-把student和sc的每个元组连接起来的做法&lt;/p&gt;
-&lt;h6 id=&#34;2-做选择操作&#34;&gt;&lt;a href=&#34;#2-做选择操作&#34; class=&#34;headerlink&#34; title=&#34;2.做选择操作&#34;&gt;&lt;/a&gt;2.做选择操作&lt;/h6&gt;&lt;p&gt;依次读入连接后的元组,按照选择条件选取满足要求的记录&lt;/p&gt;
-&lt;h6 id=&#34;3-做投影操作&#34;&gt;&lt;a href=&#34;#3-做投影操作&#34; class=&#34;headerlink&#34; title=&#34;3.做投影操作&#34;&gt;&lt;/a&gt;3.做投影操作&lt;/h6&gt;&lt;p&gt;把第二步操作的结果在Sname上作投影输出,得到最终输出&lt;/p&gt;
-&lt;h5 id=&#34;第二种情况&#34;&gt;&lt;a href=&#34;#第二种情况&#34; class=&#34;headerlink&#34; title=&#34;第二种情况&#34;&gt;&lt;/a&gt;第二种情况&lt;/h5&gt;&lt;h6 id=&#34;1-计算自然连接&#34;&gt;&lt;a href=&#34;#1-计算自然连接&#34; class=&#34;headerlink&#34; title=&#34;1.计算自然连接&#34;&gt;&lt;/a&gt;1.计算自然连接&lt;/h6&gt;&lt;h6 id=&#34;2-读取中间文件块-进行选择操作&#34;&gt;&lt;a href=&#34;#2-读取中间文件块-进行选择操作&#34; class=&#34;headerlink&#34; title=&#34;2.读取中间文件块,进行选择操作&#34;&gt;&lt;/a&gt;2.读取中间文件块,进行选择操作&lt;/h6&gt;&lt;h6 id=&#34;3-投影输出&#34;&gt;&lt;a href=&#34;#3-投影输出&#34; class=&#34;headerlink&#34; title=&#34;3.投影输出&#34;&gt;&lt;/a&gt;3.投影输出&lt;/h6&gt;&lt;h5 id=&#34;第三种情况&#34;&gt;&lt;a href=&#34;#第三种情况&#34; class=&#34;headerlink&#34; title=&#34;第三种情况&#34;&gt;&lt;/a&gt;第三种情况&lt;/h5&gt;&lt;h6 id=&#34;1-先对sc表进行选择运算&#34;&gt;&lt;a href=&#34;#1-先对sc表进行选择运算&#34; class=&#34;headerlink&#34; title=&#34;1.先对sc表进行选择运算&#34;&gt;&lt;/a&gt;1.先对sc表进行选择运算&lt;/h6&gt;&lt;h6 id=&#34;2-读取Student表-把读入的student元组和内存中收到sc元组做连接&#34;&gt;&lt;a href=&#34;#2-读取Student表-把读入的student元组和内存中收到sc元组做连接&#34; class=&#34;headerlink&#34; title=&#34;2.读取Student表,把读入的student元组和内存中收到sc元组做连接&#34;&gt;&lt;/a&gt;2.读取Student表,把读入的student元组和内存中收到sc元组做连接&lt;/h6&gt;&lt;h6 id=&#34;3-把连接结果投影输出&#34;&gt;&lt;a href=&#34;#3-把连接结果投影输出&#34; class=&#34;headerlink&#34; title=&#34;3.把连接结果投影输出&#34;&gt;&lt;/a&gt;3.把连接结果投影输出&lt;/h6&gt;&lt;p&gt;假如SC表的Cno字段/Student表上的Sno有索引,可加快读取&lt;/p&gt;
-&lt;h4 id=&#34;有选择和连接操作时-先做选择操作–代数优化&#34;&gt;&lt;a href=&#34;#有选择和连接操作时-先做选择操作–代数优化&#34; class=&#34;headerlink&#34; title=&#34;有选择和连接操作时,先做选择操作–代数优化&#34;&gt;&lt;/a&gt;有选择和连接操作时,先做选择操作–代数优化&lt;/h4&gt;&lt;h4 id=&#34;选择操作算法有权标扫描和索引扫描两种-在第三种情况下-索引扫描效果好–物理优化&#34;&gt;&lt;a href=&#34;#选择操作算法有权标扫描和索引扫描两种-在第三种情况下-索引扫描效果好–物理优化&#34; class=&#34;headerlink&#34; title=&#34;选择操作算法有权标扫描和索引扫描两种,在第三种情况下,索引扫描效果好–物理优化&#34;&gt;&lt;/a&gt;选择操作算法有权标扫描和索引扫描两种,在第三种情况下,索引扫描效果好–物理优化&lt;/h4&gt;&lt;h3 id=&#34;7-3-3-代数优化&#34;&gt;&lt;a href=&#34;#7-3-3-代数优化&#34; class=&#34;headerlink&#34; title=&#34;7.3.3 代数优化&#34;&gt;&lt;/a&gt;7.3.3 代数优化&lt;/h3&gt;&lt;h4 id=&#34;关系代数表达式的等价变换规则&#34;&gt;&lt;a href=&#34;#关系代数表达式的等价变换规则&#34; class=&#34;headerlink&#34; title=&#34;关系代数表达式的等价变换规则&#34;&gt;&lt;/a&gt;关系代数表达式的等价变换规则&lt;/h4&gt;&lt;p&gt;指用相同的关系代替两个表达式中相应的关系所得到的结果是相同的&lt;/p&gt;
-&lt;h5 id=&#34;常用的等价变换规则&#34;&gt;&lt;a href=&#34;#常用的等价变换规则&#34; class=&#34;headerlink&#34; title=&#34;常用的等价变换规则&#34;&gt;&lt;/a&gt;常用的等价变换规则&lt;/h5&gt;&lt;h4 id=&#34;代数优化策略-通过对关系代数表达式的等价变化来提高查询效率&#34;&gt;&lt;a href=&#34;#代数优化策略-通过对关系代数表达式的等价变化来提高查询效率&#34; class=&#34;headerlink&#34; title=&#34;代数优化策略-通过对关系代数表达式的等价变化来提高查询效率&#34;&gt;&lt;/a&gt;代数优化策略-通过对关系代数表达式的等价变化来提高查询效率&lt;/h4&gt;&lt;h5 id=&#34;启发式规则&#34;&gt;&lt;a href=&#34;#启发式规则&#34; class=&#34;headerlink&#34; title=&#34;启发式规则&#34;&gt;&lt;/a&gt;启发式规则&lt;/h5&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;选择运算尽可能先做,最重要最基本的一条&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;把投影运算和选择运算同时进行&lt;/li&gt;
-&lt;li&gt;把投影同其前后的双目运算结合起来&lt;/li&gt;
-&lt;li&gt;把某些选择同在它前面要执行的笛卡尔积结合起来形成一个连接运算’&lt;/li&gt;
-&lt;li&gt;找出公共子表达式&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;代数优化算法&#34;&gt;&lt;a href=&#34;#代数优化算法&#34; class=&#34;headerlink&#34; title=&#34;代数优化算法&#34;&gt;&lt;/a&gt;代数优化算法&lt;/h4&gt;&lt;p&gt;输入:一个查询树&lt;/p&gt;
-&lt;p&gt;输出:优化的查询树&lt;/p&gt;
-&lt;h5 id=&#34;物理优化&#34;&gt;&lt;a href=&#34;#物理优化&#34; class=&#34;headerlink&#34; title=&#34;物理优化&#34;&gt;&lt;/a&gt;物理优化&lt;/h5&gt;&lt;p&gt;代数优化改变查询语句中操作的次序和组合,不涉及底层的存取路径&lt;/p&gt;
-&lt;p&gt;定义:选择高效合理的操作算法/存取路径&lt;/p&gt;
-&lt;h6 id=&#34;基于存取路径的优化&#34;&gt;&lt;a href=&#34;#基于存取路径的优化&#34; class=&#34;headerlink&#34; title=&#34;基于存取路径的优化&#34;&gt;&lt;/a&gt;基于存取路径的优化&lt;/h6&gt;&lt;p&gt;选择操作的启发式规则–&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;对于小关系,使用全表顺序扫描,即使有索引&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;对于大关系–&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;对于选择条件是主键=值的查询&lt;br&gt;选择主键索引&lt;/li&gt;
-&lt;li&gt;对于选择条件是非主属性=值的查询,且选择列上有索引&lt;br&gt;估算查询结果的元组书目–比例小(10%),索引,比例大-全表&lt;/li&gt;
-&lt;li&gt;选择条件是属性上的非等值查询或范围查询,且存在索引&lt;br&gt;估算查询结果的元组书目–比例小(10%),索引,比例大-全表&lt;/li&gt;
-&lt;li&gt;对于用and连接的合取选择条件&lt;br&gt;优先采用组合索引扫描….&lt;/li&gt;
-&lt;li&gt;or连接&lt;br&gt;一般全表&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;连接操作的启发式规则&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;两个比哦啊都已经按照连接属性排序&lt;br&gt;排序合并法&lt;/li&gt;
-&lt;li&gt;一个表在连接属性上有索引&lt;br&gt;索引连接法&lt;/li&gt;
-&lt;li&gt;都不是1,2,而其中一个表比较小&lt;br&gt;散列连接法&lt;/li&gt;
-&lt;li&gt;可以选用嵌套循环阀,并选择较小的表作为外表&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h6 id=&#34;基于代价估算的优化&#34;&gt;&lt;a href=&#34;#基于代价估算的优化&#34; class=&#34;headerlink&#34; title=&#34;基于代价估算的优化&#34;&gt;&lt;/a&gt;基于代价估算的优化&lt;/h6&gt;&lt;h6 id=&#34;二者结合的优化&#34;&gt;&lt;a href=&#34;#二者结合的优化&#34; class=&#34;headerlink&#34; title=&#34;二者结合的优化&#34;&gt;&lt;/a&gt;二者结合的优化&lt;/h6&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/</guid>
-            <title></title>
-            <link>http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/</link>
-            <pubDate>Mon, 06 Dec 2021 19:03:26 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;9.1 数据库完整性概述&lt;/p&gt;
-&lt;p&gt;数据库完整性–数据的正确性,有效性,西安共性&lt;/p&gt;
-&lt;p&gt;列级约束&lt;/p&gt;
-&lt;p&gt;对属性的数据类型,等的定义&lt;/p&gt;
-&lt;p&gt;元祖约束&lt;/p&gt;
-&lt;p&gt;元组中各个属性之间的约束关系&lt;/p&gt;
-&lt;h4 id=&#34;实现完整性约束的方法&#34;&gt;&lt;a href=&#34;#实现完整性约束的方法&#34; class=&#34;headerlink&#34; title=&#34;实现完整性约束的方法&#34;&gt;&lt;/a&gt;实现完整性约束的方法&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;提供定义机制&lt;/li&gt;
-&lt;li&gt;提供检查方法&lt;/li&gt;
-&lt;li&gt;违约处理&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;9-4用户定义的完整性&#34;&gt;&lt;a href=&#34;#9-4用户定义的完整性&#34; class=&#34;headerlink&#34; title=&#34;9.4用户定义的完整性&#34;&gt;&lt;/a&gt;9.4用户定义的完整性&lt;/h2&gt;&lt;h2 id=&#34;9-5触发器&#34;&gt;&lt;a href=&#34;#9-5触发器&#34; class=&#34;headerlink&#34; title=&#34;9.5触发器&#34;&gt;&lt;/a&gt;9.5触发器&lt;/h2&gt;&lt;p&gt;一类用户定义在关系数据表上的一类由事件驱动的特殊过程,用编程的方法实现复杂的业务规则&lt;/p&gt;
-&lt;p&gt;是一种特殊类型的存储过程&lt;/p&gt;
-&lt;p&gt;可用触发器完成很多数据库完整性保护的过程&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;复杂的业务规则&lt;/li&gt;
-&lt;li&gt;比较数据修改前后状态&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;SQL:CREATE TRIGER命令&lt;/p&gt;
-&lt;h1 id=&#34;事务&#34;&gt;&lt;a href=&#34;#事务&#34; class=&#34;headerlink&#34; title=&#34;事务&#34;&gt;&lt;/a&gt;事务&lt;/h1&gt;&lt;p&gt;原子性:不可分割&lt;/p&gt;
-&lt;p&gt;一致性:事务执行结果必须从一个状态转换到另一个状态时保持一致,即若中间出现错误,则将所有操作撤销&lt;/p&gt;
-&lt;p&gt;事务应当具有ACID性质，&lt;br&gt;A是&lt;strong&gt;原子&lt;/strong&gt;性(atomic)：事务中包含的各项操作必须全部成功执行或者全部不执行。任何一项操作失败，将导致整个事务失败，其他已经执行的任务所作的数据操作都将被撤销，只有所有的操作全部成功，整个事务才算是成功完成。&lt;br&gt;C是&lt;strong&gt;一致性&lt;/strong&gt;(consistent)：保证了当事务结束后，系统状态是一致的。那么什么是一致的系统状态？例如，如果银行始终遵循着”银行账号必须保持正态平衡”的原则，那么银行系统的状态就是一致的。上面的转账例子中，在取钱的过程中，账户会出现负态平衡，在事务结束之后，系统又回到一致的状态。这样，系统的状态对于客户来说，始终是一致的。&lt;br&gt;I是&lt;strong&gt;隔离&lt;/strong&gt;性(isolated)：使得并发执行的事务，彼此无法看到对方的中间状态。保证了并发执行的事务顺序执行，而不会导致系统状态不一致。&lt;br&gt;D是&lt;strong&gt;持久性&lt;/strong&gt;(durable)：保证了事务完成后所作的改动都会被持久化，即使是发生灾难性的失败。可恢复性资源保存了一份事务日志，如果资源发生故障，可以通过日志来将数据重建起来。&lt;/p&gt;
-&lt;p&gt;事务应处在下列状态之一&lt;/p&gt;
-&lt;p&gt;活动状态&lt;/p&gt;
-&lt;p&gt;失败状态:意味着要回滚&lt;/p&gt;
-&lt;p&gt;中止状态:数据库已经回滚完毕,恢复到提交前状态&lt;/p&gt;
-&lt;p&gt;提交状态:当数据更改完全写入磁盘时,进入提交状态&lt;/p&gt;
-&lt;p&gt;10.3.1事务故障的恢复&lt;/p&gt;
-&lt;p&gt;1.反向扫描日文件日志,查找该事务的更新操作&lt;/p&gt;
-&lt;p&gt;2.对该事务的更新操作执行你操作&lt;/p&gt;
-&lt;p&gt;3.继续反向扫描,直到读到此事务的开始操作&lt;/p&gt;
-&lt;p&gt;10.3.2系统故障恢复&lt;/p&gt;
-&lt;p&gt;1.&lt;strong&gt;正向&lt;/strong&gt;扫描日志文件,列出Redo队列,Undo队列&lt;/p&gt;
-&lt;h3 id=&#34;日志&#34;&gt;&lt;a href=&#34;#日志&#34; class=&#34;headerlink&#34; title=&#34;日志&#34;&gt;&lt;/a&gt;日志&lt;/h3&gt;&lt;p&gt;&lt;u&gt;&lt;strong&gt;登记两条原则&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;&lt;strong&gt;1.登记次序严格按并行事物执行顺序&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;&lt;strong&gt;2.先写日志文件,后写数据库&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/hello-world/</guid>
-            <title>Hello World</title>
-            <link>http://example.com/2021/12/06/hello-world/</link>
-            <pubDate>Mon, 06 Dec 2021 13:18:37 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;Run-server&#34;&gt;&lt;a href=&#34;#Run-server&#34; class=&#34;headerlink&#34; title=&#34;Run server&#34;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;Generate-static-files&#34;&gt;&lt;a href=&#34;#Generate-static-files&#34; class=&#34;headerlink&#34; title=&#34;Generate static files&#34;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;Deploy-to-remote-sites&#34;&gt;&lt;a href=&#34;#Deploy-to-remote-sites&#34; class=&#34;headerlink&#34; title=&#34;Deploy to remote sites&#34;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="exp8" scheme="http://example.com/tags/exp8/" />
+        <updated>2021-12-06T11:09:47.000Z</updated>
+    </entry>
+</feed>
