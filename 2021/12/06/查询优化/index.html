@@ -7,11 +7,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="查询优化游标目的-解决集合性操作语言与过程性操作语言的不匹配原因:sql一条语句一般能产生或处理多条记录,而主语言一次只能存放一条记录是什么:是系统为用户开设的一个数据缓冲区,存放sql语句的执行结果用户可以用SQL语句逐一地从游标中获取记录,并赋给主变量 定义游标: 使用Declare语句EXEC SQL DECLARE &lt;&gt; CURSOR…… 打开游标–执行相应的select语句,">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/12/06/%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="查询优化游标目的-解决集合性操作语言与过程性操作语言的不匹配原因:sql一条语句一般能产生或处理多条记录,而主语言一次只能存放一条记录是什么:是系统为用户开设的一个数据缓冲区,存放sql语句的执行结果用户可以用SQL语句逐一地从游标中获取记录,并赋给主变量 定义游标: 使用Declare语句EXEC SQL DECLARE &lt;&gt; CURSOR…… 打开游标–执行相应的select语句,">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-12-06T11:03:26.508Z">
+<meta property="article:modified_time" content="2021-11-18T06:17:52.003Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,94 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-数据库的安全性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/" class="article-date">
-  <time datetime="2021-12-06T11:03:26.530Z" itemprop="datePublished">2021-12-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数据库的安全性"><a href="#数据库的安全性" class="headerlink" title="数据库的安全性"></a>数据库的安全性</h1><h2 id="8-4-存取控制"><a href="#8-4-存取控制" class="headerlink" title="8.4 存取控制"></a>8.4 存取控制</h2><h6 id="用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统"><a href="#用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统" class="headerlink" title="用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统"></a>用户权限定义和合法的权限检查机制一起组成了DBMS的安全子系统</h6><p>常用存取控制方法</p>
-<h4 id="自主存取控制"><a href="#自主存取控制" class="headerlink" title="自主存取控制"></a>自主存取控制</h4><p>灵活</p>
-<p>同一用户对不同的数据对象有不同的…</p>
-<h5 id="授权粒度"><a href="#授权粒度" class="headerlink" title="授权粒度"></a>授权粒度</h5><p>授权的数据对象粒度</p>
-<p>数据库,表,属性列,行…</p>
-<ol>
-<li>实现–GRANT REVOKE</li>
-<li>数据库角色<br>在用户量较大的情况下引入<br>定义:一组与数据库操作有关的角色<br>可以为具有相同权限的用户创建一个角色</li>
-<li>权限传播<br>…</li>
-</ol>
-<h4 id="强制存取控制"><a href="#强制存取控制" class="headerlink" title="强制存取控制"></a>强制存取控制</h4><h5 id="主体与客体"><a href="#主体与客体" class="headerlink" title="主体与客体"></a>主体与客体</h5><h5 id="敏感度标记"><a href="#敏感度标记" class="headerlink" title="敏感度标记"></a>敏感度标记</h5><p>DBMS为每个实例指派一个敏感度标记</p>
-<p>敏感度分为若干级别(绝密..</p>
-<p>主体的敏感度标记称为许可证级别</p>
-<p>客体的称为密级</p>
-<p>MAC机制就是通过对比主体的Label和客体的Label,最终确定主体是否能够存取客体</p>
-<h5 id="强制存取控制规则"><a href="#强制存取控制规则" class="headerlink" title="强制存取控制规则"></a>强制存取控制规则</h5><ol>
-<li>读 主体许可证级别&gt;=客体密级</li>
-<li>写 主体的许可证级别=客体密级</li>
-<li>修正规则*****<ol>
-<li>waiting for write</li>
-</ol>
-</li>
-</ol>
-<h4 id="权限-只有具有合法的许可证才能存取"><a href="#权限-只有具有合法的许可证才能存取" class="headerlink" title="权限,只有具有合法的许可证才能存取"></a>权限,只有具有合法的许可证才能存取</h4><p>每一个用户被授予某一个级别的许可证</p>
-<p>对于任意一个对象,只有具有合法的许可证才能存取</p>
-<h2 id="8-5-视图机制"><a href="#8-5-视图机制" class="headerlink" title="8.5 视图机制"></a>8.5 视图机制</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/" data-id="ckwukfh4w0001a4tvhew1duwc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-数据库操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" class="article-date">
-  <time datetime="2021-12-06T11:03:26.527Z" itemprop="datePublished">2021-12-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>select</p>
-<p>from</p>
-<p>where</p>
-<p>group by</p>
-<p>having </p>
-<p>order by</p>
-<h5 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h5><p>指定属性列–不包含的取空</p>
-<p>不指定-不能省略任何属性</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" data-id="ckwukfh4z0002a4tv3nv56kjq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-查询优化" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-查询优化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/12/06/%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/" class="article-date">
   <time datetime="2021-12-06T11:03:26.508Z" itemprop="datePublished">2021-12-06</time>
@@ -249,122 +166,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-9.1 数据库完整性概述" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/" class="article-date">
-  <time datetime="2021-12-06T11:03:26.476Z" itemprop="datePublished">2021-12-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>9.1 数据库完整性概述</p>
-<p>数据库完整性–数据的正确性,有效性,西安共性</p>
-<p>列级约束</p>
-<p>对属性的数据类型,等的定义</p>
-<p>元祖约束</p>
-<p>元组中各个属性之间的约束关系</p>
-<h4 id="实现完整性约束的方法"><a href="#实现完整性约束的方法" class="headerlink" title="实现完整性约束的方法"></a>实现完整性约束的方法</h4><ol>
-<li>提供定义机制</li>
-<li>提供检查方法</li>
-<li>违约处理</li>
-</ol>
-<h2 id="9-4用户定义的完整性"><a href="#9-4用户定义的完整性" class="headerlink" title="9.4用户定义的完整性"></a>9.4用户定义的完整性</h2><h2 id="9-5触发器"><a href="#9-5触发器" class="headerlink" title="9.5触发器"></a>9.5触发器</h2><p>一类用户定义在关系数据表上的一类由事件驱动的特殊过程,用编程的方法实现复杂的业务规则</p>
-<p>是一种特殊类型的存储过程</p>
-<p>可用触发器完成很多数据库完整性保护的过程</p>
-<ol>
-<li>复杂的业务规则</li>
-<li>比较数据修改前后状态</li>
-</ol>
-<p>SQL:CREATE TRIGER命令</p>
-<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p>原子性:不可分割</p>
-<p>一致性:事务执行结果必须从一个状态转换到另一个状态时保持一致,即若中间出现错误,则将所有操作撤销</p>
-<p>事务应当具有ACID性质，<br>A是<strong>原子</strong>性(atomic)：事务中包含的各项操作必须全部成功执行或者全部不执行。任何一项操作失败，将导致整个事务失败，其他已经执行的任务所作的数据操作都将被撤销，只有所有的操作全部成功，整个事务才算是成功完成。<br>C是<strong>一致性</strong>(consistent)：保证了当事务结束后，系统状态是一致的。那么什么是一致的系统状态？例如，如果银行始终遵循着”银行账号必须保持正态平衡”的原则，那么银行系统的状态就是一致的。上面的转账例子中，在取钱的过程中，账户会出现负态平衡，在事务结束之后，系统又回到一致的状态。这样，系统的状态对于客户来说，始终是一致的。<br>I是<strong>隔离</strong>性(isolated)：使得并发执行的事务，彼此无法看到对方的中间状态。保证了并发执行的事务顺序执行，而不会导致系统状态不一致。<br>D是<strong>持久性</strong>(durable)：保证了事务完成后所作的改动都会被持久化，即使是发生灾难性的失败。可恢复性资源保存了一份事务日志，如果资源发生故障，可以通过日志来将数据重建起来。</p>
-<p>事务应处在下列状态之一</p>
-<p>活动状态</p>
-<p>失败状态:意味着要回滚</p>
-<p>中止状态:数据库已经回滚完毕,恢复到提交前状态</p>
-<p>提交状态:当数据更改完全写入磁盘时,进入提交状态</p>
-<p>10.3.1事务故障的恢复</p>
-<p>1.反向扫描日文件日志,查找该事务的更新操作</p>
-<p>2.对该事务的更新操作执行你操作</p>
-<p>3.继续反向扫描,直到读到此事务的开始操作</p>
-<p>10.3.2系统故障恢复</p>
-<p>1.<strong>正向</strong>扫描日志文件,列出Redo队列,Undo队列</p>
-<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><p><u><strong>登记两条原则</strong></u></p>
-<p><u><strong>1.登记次序严格按并行事物执行顺序</strong></u></p>
-<p><u><strong>2.先写日志文件,后写数据库</strong></u></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/" data-id="ckwukfh4n0000a4tv58jo0rf8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/06/hello-world/" class="article-date">
-  <time datetime="2021-12-06T05:18:37.655Z" itemprop="datePublished">2021-12-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          (no title)
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/12/06/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/06/hello-world/" data-id="ckwu894nn0000o4tvbj8845n9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
