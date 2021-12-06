@@ -10,13 +10,89 @@
         </author>
         <description></description>
         <language>en</language>
-        <pubDate>Mon, 06 Dec 2021 19:09:47 +0800</pubDate>
-        <lastBuildDate>Mon, 06 Dec 2021 19:09:47 +0800</lastBuildDate>
+        <pubDate>Mon, 06 Dec 2021 22:53:47 +0800</pubDate>
+        <lastBuildDate>Mon, 06 Dec 2021 22:53:47 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/</guid>
+            <title>21/12/6 Database 数据库完整性概述</title>
+            <link>http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/</link>
+            <category term="大三" scheme="http://example.com/categories/junior/" />
+            <category term="数据库" scheme="http://example.com/categories/junior/database/" />
+            <category term="数据库,完整性" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93-%E5%AE%8C%E6%95%B4%E6%80%A7/" />
+            <pubDate>Mon, 06 Dec 2021 22:53:47 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;9.1 数据库完整性概述&lt;/p&gt;
+&lt;p&gt;数据库完整性 -- 数据的正确性，有效性，西安共性&lt;/p&gt;
+&lt;p&gt;列级约束&lt;/p&gt;
+&lt;p&gt;对属性的数据类型，等的定义&lt;/p&gt;
+&lt;p&gt;元祖约束&lt;/p&gt;
+&lt;p&gt;元组中各个属性之间的约束关系&lt;/p&gt;
+&lt;h4 id=&#34;实现完整性约束的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实现完整性约束的方法&#34;&gt;#&lt;/a&gt; 实现完整性约束的方法&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;提供定义机制&lt;/li&gt;
+&lt;li&gt;提供检查方法&lt;/li&gt;
+&lt;li&gt;违约处理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;94用户定义的完整性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#94用户定义的完整性&#34;&gt;#&lt;/a&gt; 9.4 用户定义的完整性&lt;/h2&gt;
+&lt;h2 id=&#34;95触发器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#95触发器&#34;&gt;#&lt;/a&gt; 9.5 触发器&lt;/h2&gt;
+&lt;p&gt;一类用户定义在关系数据表上的一类由事件驱动的特殊过程，用编程的方法实现复杂的业务规则&lt;/p&gt;
+&lt;p&gt;是一种特殊类型的存储过程&lt;/p&gt;
+&lt;p&gt;可用触发器完成很多数据库完整性保护的过程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;复杂的业务规则&lt;/li&gt;
+&lt;li&gt;比较数据修改前后状态&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;SQL:CREATE TRIGER 命令&lt;/p&gt;
+&lt;h1 id=&#34;事务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#事务&#34;&gt;#&lt;/a&gt; 事务&lt;/h1&gt;
+&lt;p&gt;原子性：不可分割&lt;/p&gt;
+&lt;p&gt;一致性：事务执行结果必须从一个状态转换到另一个状态时保持一致，即若中间出现错误，则将所有操作撤销&lt;/p&gt;
+&lt;p&gt;事务应当具有 ACID 性质，&lt;br /&gt;
+A 是&lt;strong&gt;原子&lt;/strong&gt;性 (atomic)：事务中包含的各项操作必须全部成功执行或者全部不执行。任何一项操作失败，将导致整个事务失败，其他已经执行的任务所作的数据操作都将被撤销，只有所有的操作全部成功，整个事务才算是成功完成。&lt;br /&gt;
+C 是&lt;strong&gt;一致性&lt;/strong&gt; (consistent)：保证了当事务结束后，系统状态是一致的。那么什么是一致的系统状态？例如，如果银行始终遵循着 &amp;quot;银行账号必须保持正态平衡&amp;quot; 的原则，那么银行系统的状态就是一致的。上面的转账例子中，在取钱的过程中，账户会出现负态平衡，在事务结束之后，系统又回到一致的状态。这样，系统的状态对于客户来说，始终是一致的。&lt;br /&gt;
+I 是&lt;strong&gt;隔离&lt;/strong&gt;性 (isolated)：使得并发执行的事务，彼此无法看到对方的中间状态。保证了并发执行的事务顺序执行，而不会导致系统状态不一致。&lt;br /&gt;
+D 是&lt;strong&gt;持久性&lt;/strong&gt; (durable)：保证了事务完成后所作的改动都会被持久化，即使是发生灾难性的失败。可恢复性资源保存了一份事务日志，如果资源发生故障，可以通过日志来将数据重建起来。&lt;/p&gt;
+&lt;p&gt;事务应处在下列状态之一&lt;/p&gt;
+&lt;p&gt;活动状态&lt;/p&gt;
+&lt;p&gt;失败状态：意味着要回滚&lt;/p&gt;
+&lt;p&gt;中止状态：数据库已经回滚完毕，恢复到提交前状态&lt;/p&gt;
+&lt;p&gt;提交状态：当数据更改完全写入磁盘时，进入提交状态&lt;/p&gt;
+&lt;p&gt;10.3.1 事务故障的恢复&lt;/p&gt;
+&lt;p&gt;1. 反向扫描日文件日志，查找该事务的更新操作&lt;/p&gt;
+&lt;p&gt;2. 对该事务的更新操作执行你操作&lt;/p&gt;
+&lt;p&gt;3. 继续反向扫描，直到读到此事务的开始操作&lt;/p&gt;
+&lt;p&gt;10.3.2 系统故障恢复&lt;/p&gt;
+&lt;p&gt;1.&lt;strong&gt; 正向&lt;/strong&gt;扫描日志文件，列出 Redo 队列，Undo 队列&lt;/p&gt;
+&lt;h3 id=&#34;日志&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#日志&#34;&gt;#&lt;/a&gt; 日志&lt;/h3&gt;
+&lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt; 登记两条原则&lt;/strong&gt; &amp;lt;/u&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt;1. 登记次序严格按并行事物执行顺序&lt;/strong&gt; &amp;lt;/u&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt;2. 先写日志文件，后写数据库&lt;/strong&gt; &amp;lt;/u&amp;gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</guid>
+            <title>21/12/6 Database 数据库操作</title>
+            <link>http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</link>
+            <category term="大三" scheme="http://example.com/categories/junior/" />
+            <category term="数据库" scheme="http://example.com/categories/junior/database/" />
+            <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+            <pubDate>Mon, 06 Dec 2021 22:09:47 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库&#34;&gt;#&lt;/a&gt; 数据库&lt;/h2&gt;
+&lt;p&gt;select&lt;/p&gt;
+&lt;p&gt;from&lt;/p&gt;
+&lt;p&gt;where&lt;/p&gt;
+&lt;p&gt;group by&lt;/p&gt;
+&lt;p&gt;having&lt;/p&gt;
+&lt;p&gt;order by&lt;/p&gt;
+&lt;h5 id=&#34;insert&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#insert&#34;&gt;#&lt;/a&gt; insert&lt;/h5&gt;
+&lt;p&gt;指定属性列 -- 不包含的取空&lt;/p&gt;
+&lt;p&gt;不指定 - 不能省略任何属性&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2021/12/06/%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/</guid>
             <title>21/12/6 Database 查询优化</title>
             <link>http://example.com/2021/12/06/%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/</link>
             <category term="大三" scheme="http://example.com/categories/junior/" />
+            <category term="数据库" scheme="http://example.com/categories/junior/database/" />
             <category term="class3" scheme="http://example.com/tags/class3/" />
             <pubDate>Mon, 06 Dec 2021 19:09:47 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;查询优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查询优化&#34;&gt;#&lt;/a&gt; 查询优化&lt;/h1&gt;
@@ -1007,64 +1083,6 @@ url varchar(200)&lt;/p&gt;
 &lt;h4 id=&#34;权限-只有具有合法的许可证才能存取&#34;&gt;&lt;a href=&#34;#权限-只有具有合法的许可证才能存取&#34; class=&#34;headerlink&#34; title=&#34;权限,只有具有合法的许可证才能存取&#34;&gt;&lt;/a&gt;权限,只有具有合法的许可证才能存取&lt;/h4&gt;&lt;p&gt;每一个用户被授予某一个级别的许可证&lt;/p&gt;
 &lt;p&gt;对于任意一个对象,只有具有合法的许可证才能存取&lt;/p&gt;
 &lt;h2 id=&#34;8-5-视图机制&#34;&gt;&lt;a href=&#34;#8-5-视图机制&#34; class=&#34;headerlink&#34; title=&#34;8.5 视图机制&#34;&gt;&lt;/a&gt;8.5 视图机制&lt;/h2&gt; ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</guid>
-            <title></title>
-            <link>http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</link>
-            <pubDate>Mon, 06 Dec 2021 19:03:26 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;数据库&#34;&gt;&lt;a href=&#34;#数据库&#34; class=&#34;headerlink&#34; title=&#34;数据库&#34;&gt;&lt;/a&gt;数据库&lt;/h2&gt;&lt;p&gt;select&lt;/p&gt;
-&lt;p&gt;from&lt;/p&gt;
-&lt;p&gt;where&lt;/p&gt;
-&lt;p&gt;group by&lt;/p&gt;
-&lt;p&gt;having &lt;/p&gt;
-&lt;p&gt;order by&lt;/p&gt;
-&lt;h5 id=&#34;insert&#34;&gt;&lt;a href=&#34;#insert&#34; class=&#34;headerlink&#34; title=&#34;insert&#34;&gt;&lt;/a&gt;insert&lt;/h5&gt;&lt;p&gt;指定属性列–不包含的取空&lt;/p&gt;
-&lt;p&gt;不指定-不能省略任何属性&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/</guid>
-            <title></title>
-            <link>http://example.com/2021/12/06/9.1%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A6%82%E8%BF%B0/</link>
-            <pubDate>Mon, 06 Dec 2021 19:03:26 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;9.1 数据库完整性概述&lt;/p&gt;
-&lt;p&gt;数据库完整性–数据的正确性,有效性,西安共性&lt;/p&gt;
-&lt;p&gt;列级约束&lt;/p&gt;
-&lt;p&gt;对属性的数据类型,等的定义&lt;/p&gt;
-&lt;p&gt;元祖约束&lt;/p&gt;
-&lt;p&gt;元组中各个属性之间的约束关系&lt;/p&gt;
-&lt;h4 id=&#34;实现完整性约束的方法&#34;&gt;&lt;a href=&#34;#实现完整性约束的方法&#34; class=&#34;headerlink&#34; title=&#34;实现完整性约束的方法&#34;&gt;&lt;/a&gt;实现完整性约束的方法&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;提供定义机制&lt;/li&gt;
-&lt;li&gt;提供检查方法&lt;/li&gt;
-&lt;li&gt;违约处理&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;9-4用户定义的完整性&#34;&gt;&lt;a href=&#34;#9-4用户定义的完整性&#34; class=&#34;headerlink&#34; title=&#34;9.4用户定义的完整性&#34;&gt;&lt;/a&gt;9.4用户定义的完整性&lt;/h2&gt;&lt;h2 id=&#34;9-5触发器&#34;&gt;&lt;a href=&#34;#9-5触发器&#34; class=&#34;headerlink&#34; title=&#34;9.5触发器&#34;&gt;&lt;/a&gt;9.5触发器&lt;/h2&gt;&lt;p&gt;一类用户定义在关系数据表上的一类由事件驱动的特殊过程,用编程的方法实现复杂的业务规则&lt;/p&gt;
-&lt;p&gt;是一种特殊类型的存储过程&lt;/p&gt;
-&lt;p&gt;可用触发器完成很多数据库完整性保护的过程&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;复杂的业务规则&lt;/li&gt;
-&lt;li&gt;比较数据修改前后状态&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;SQL:CREATE TRIGER命令&lt;/p&gt;
-&lt;h1 id=&#34;事务&#34;&gt;&lt;a href=&#34;#事务&#34; class=&#34;headerlink&#34; title=&#34;事务&#34;&gt;&lt;/a&gt;事务&lt;/h1&gt;&lt;p&gt;原子性:不可分割&lt;/p&gt;
-&lt;p&gt;一致性:事务执行结果必须从一个状态转换到另一个状态时保持一致,即若中间出现错误,则将所有操作撤销&lt;/p&gt;
-&lt;p&gt;事务应当具有ACID性质，&lt;br&gt;A是&lt;strong&gt;原子&lt;/strong&gt;性(atomic)：事务中包含的各项操作必须全部成功执行或者全部不执行。任何一项操作失败，将导致整个事务失败，其他已经执行的任务所作的数据操作都将被撤销，只有所有的操作全部成功，整个事务才算是成功完成。&lt;br&gt;C是&lt;strong&gt;一致性&lt;/strong&gt;(consistent)：保证了当事务结束后，系统状态是一致的。那么什么是一致的系统状态？例如，如果银行始终遵循着”银行账号必须保持正态平衡”的原则，那么银行系统的状态就是一致的。上面的转账例子中，在取钱的过程中，账户会出现负态平衡，在事务结束之后，系统又回到一致的状态。这样，系统的状态对于客户来说，始终是一致的。&lt;br&gt;I是&lt;strong&gt;隔离&lt;/strong&gt;性(isolated)：使得并发执行的事务，彼此无法看到对方的中间状态。保证了并发执行的事务顺序执行，而不会导致系统状态不一致。&lt;br&gt;D是&lt;strong&gt;持久性&lt;/strong&gt;(durable)：保证了事务完成后所作的改动都会被持久化，即使是发生灾难性的失败。可恢复性资源保存了一份事务日志，如果资源发生故障，可以通过日志来将数据重建起来。&lt;/p&gt;
-&lt;p&gt;事务应处在下列状态之一&lt;/p&gt;
-&lt;p&gt;活动状态&lt;/p&gt;
-&lt;p&gt;失败状态:意味着要回滚&lt;/p&gt;
-&lt;p&gt;中止状态:数据库已经回滚完毕,恢复到提交前状态&lt;/p&gt;
-&lt;p&gt;提交状态:当数据更改完全写入磁盘时,进入提交状态&lt;/p&gt;
-&lt;p&gt;10.3.1事务故障的恢复&lt;/p&gt;
-&lt;p&gt;1.反向扫描日文件日志,查找该事务的更新操作&lt;/p&gt;
-&lt;p&gt;2.对该事务的更新操作执行你操作&lt;/p&gt;
-&lt;p&gt;3.继续反向扫描,直到读到此事务的开始操作&lt;/p&gt;
-&lt;p&gt;10.3.2系统故障恢复&lt;/p&gt;
-&lt;p&gt;1.&lt;strong&gt;正向&lt;/strong&gt;扫描日志文件,列出Redo队列,Undo队列&lt;/p&gt;
-&lt;h3 id=&#34;日志&#34;&gt;&lt;a href=&#34;#日志&#34; class=&#34;headerlink&#34; title=&#34;日志&#34;&gt;&lt;/a&gt;日志&lt;/h3&gt;&lt;p&gt;&lt;u&gt;&lt;strong&gt;登记两条原则&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;&lt;strong&gt;1.登记次序严格按并行事物执行顺序&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;&lt;strong&gt;2.先写日志文件,后写数据库&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
- ]]></description>
         </item>
         <item>
             <guid isPermalink="true">http://example.com/2021/12/06/hello-world/</guid>
