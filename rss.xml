@@ -440,7 +440,7 @@ tags: 操作系统，计算机&lt;br /&gt;
 &lt;h6 id=&#34;特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特点&#34;&gt;#&lt;/a&gt; 特点：&lt;/h6&gt;
 &lt;p&gt;方便文件共享，分类。&lt;br /&gt;
 两个或多个 FCB 的一致性难保证，因此将 FCB 独立存放，引入带文件 / 目录名和 FCB 指针的目录项&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211130092527762.png&#34; alt=&#34;image-20211130092527762&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/ADfc3PNnYOdbeiH.png&#34; alt=&#34;image-20211130092527762&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;文件共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件共享&#34;&gt;#&lt;/a&gt; 文件共享&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -458,14 +458,14 @@ tags: 操作系统，计算机&lt;br /&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;文件存储器空间布局与管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件存储器空间布局与管理&#34;&gt;#&lt;/a&gt; 文件存储器空间布局与管理&lt;/h2&gt;
 &lt;h4 id=&#34;空闲区表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#空闲区表&#34;&gt;#&lt;/a&gt; 空闲区表&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211203133204515.png&#34; alt=&#34;image-20211203133204515&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/H2of5R3Lx7AGNwm.png&#34; alt=&#34;image-20211203133204515&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;位示图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#位示图&#34;&gt;#&lt;/a&gt; 位示图&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211203133252860.png&#34; alt=&#34;image-20211203133252860&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/knsUycY9irLAS1G.png&#34; alt=&#34;image-20211203133252860&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211203133418295.png&#34; alt=&#34;image-20211203133418295&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;空闲块链&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#空闲块链&#34;&gt;#&lt;/a&gt; 空闲块链&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211203134255752.png&#34; alt=&#34;image-20211203134255752&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211203135715385.png&#34; alt=&#34;image-20211203135715385&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211203140034820.png&#34; alt=&#34;image-20211203140034820&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/LH76uxTbrA3FSno.png&#34; alt=&#34;image-20211203134255752&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/FQnjZpyWuqCd6El.png&#34; alt=&#34;image-20211203135715385&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/irJzfKHgLs96TBE.png&#34; alt=&#34;image-20211203140034820&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
