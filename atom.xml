@@ -8,21 +8,12 @@
     <author>
       <name>nmhn</name>
     </author>
-    <updated>2021-12-07T01:29:22.668Z</updated>
+    <updated>2021-12-07T00:43:00.000Z</updated>
     <entry>
         <id>http://example.com/2021/12/07/%E5%A4%96%E8%AE%BE/</id>
-        <title></title>
+        <title>21/12/7 设备管理</title>
         <link rel="alternate" href="http://example.com/2021/12/07/%E5%A4%96%E8%AE%BE/"/>
-        <content type="html">&lt;hr /&gt;
-&lt;p&gt;title: 21/12/6 设备管理&lt;br /&gt;
- date: 2021-12-07 08:42:00&lt;br /&gt;
-tags: 操作系统，计算机&lt;br /&gt;
- categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[大三，操作系统]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h1 id=&#34;设备管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设备管理&#34;&gt;#&lt;/a&gt; 设备管理&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;设备管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设备管理&#34;&gt;#&lt;/a&gt; 设备管理&lt;/h1&gt;
 &lt;h2 id=&#34;1-控制器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-控制器&#34;&gt;#&lt;/a&gt; 1. 控制器&lt;/h2&gt;
 &lt;h6 id=&#34;控制器的任务是在外设与内存之间完成比特流与字节块之间的转换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#控制器的任务是在外设与内存之间完成比特流与字节块之间的转换&#34;&gt;#&lt;/a&gt; 控制器的任务是在外设与内存之间完成比特流与字节块之间的转换&lt;/h6&gt;
 &lt;h3 id=&#34;11寄存器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11寄存器&#34;&gt;#&lt;/a&gt; 1.1 寄存器&lt;/h3&gt;
@@ -67,7 +58,10 @@ tags: 操作系统，计算机&lt;br /&gt;
 &lt;p&gt;&lt;strong&gt;设备的分配&lt;/strong&gt;：共享设备和独占设备的分配问题&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <updated>2021-12-07T01:29:22.668Z</updated>
+        <category term="大三" scheme="http://example.com/categories/junior/" />
+        <category term="操作系统" scheme="http://example.com/categories/junior/computerSystem/" />
+        <category term="操作系统" scheme="http://example.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
+        <updated>2021-12-07T00:43:00.000Z</updated>
     </entry>
     <entry>
         <id>http://example.com/2021/12/07/%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/</id>
@@ -462,7 +456,7 @@ tags: 操作系统，计算机&lt;br /&gt;
 </content>
         <category term="大三" scheme="http://example.com/categories/junior/" />
         <category term="操作系统" scheme="http://example.com/categories/junior/computerSystem/" />
-        <category term="操作系统,计算机" scheme="http://example.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E8%AE%A1%E7%AE%97%E6%9C%BA/" />
+        <category term="操作系统" scheme="http://example.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
         <updated>2021-12-07T00:43:00.000Z</updated>
     </entry>
     <entry>
