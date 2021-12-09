@@ -8,7 +8,272 @@
     <author>
       <name>nmhn</name>
     </author>
-    <updated>2021-12-07T14:09:47.000Z</updated>
+    <updated>2021-12-09T02:48:35.000Z</updated>
+    <entry>
+        <id>http://example.com/2021/12/09/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/</id>
+        <title>网络地址转换</title>
+        <link rel="alternate" href="http://example.com/2021/12/09/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/"/>
+        <content type="html">&lt;h3 id=&#34;网络地址转换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络地址转换&#34;&gt;#&lt;/a&gt; 网络地址转换&lt;/h3&gt;
+&lt;p&gt;目的：解决 ip 稀缺&lt;/p&gt;
+&lt;p&gt;三个专用地址块&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/15aVHB4QMLxdjTC.png&#34; alt=&#34;image-20211118100015197&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;原理：本地网络中的所有计算机在访问 Internet 时使用同一个 IP 地址&lt;br /&gt;
+，within the local network, computers use private addresses for&lt;br /&gt;
+routing intramural traffic 在本地网络中，计算机使用专用地址&lt;br /&gt;
+进行路由。对于目的地址是专用地址的数据报，路由器一律&lt;br /&gt;
+不予转发。&lt;/p&gt;
+&lt;p&gt;本质：通过端口号区分主机&lt;/p&gt;
+&lt;h3 id=&#34;ipv6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ipv6&#34;&gt;#&lt;/a&gt; IPV6&lt;/h3&gt;
+&lt;p&gt;同样是为了改变缺少 ip 地址的问题&lt;/p&gt;
+&lt;p&gt;源 ip:128 位&lt;/p&gt;
+&lt;p&gt;目的 ip:128 位&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/CaiYJWqQs4EG1UB.png&#34; alt=&#34;image-20211118111114068&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;隧道技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隧道技术&#34;&gt;#&lt;/a&gt; 隧道技术&lt;/h3&gt;
+&lt;p&gt;解决 ipv4 和 ipv6 共存&lt;/p&gt;
+&lt;p&gt;ipv6 作为 ipv4 的 payload (数据) 发送&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/PxaInA3sEKMHGpF.png&#34; alt=&#34;image-20211118111549533&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="大三" scheme="http://example.com/categories/junior/" />
+        <category term="计算机网络" scheme="http://example.com/categories/junior/computernetwork/" />
+        <category term="网络地址" scheme="http://example.com/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80/" />
+        <updated>2021-12-09T02:48:35.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/12/09/%E7%BD%91%E7%BB%9C%E5%B1%82/</id>
+        <title>网络层</title>
+        <link rel="alternate" href="http://example.com/2021/12/09/%E7%BD%91%E7%BB%9C%E5%B1%82/"/>
+        <content type="html">&lt;h1 id=&#34;网络层-控制平面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络层-控制平面&#34;&gt;#&lt;/a&gt; 网络层 - 控制平面&lt;/h1&gt;
+&lt;h2 id=&#34;路由算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由算法&#34;&gt;#&lt;/a&gt; 路由算法&lt;/h2&gt;
+&lt;h6 id=&#34;产生路由表的算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#产生路由表的算法&#34;&gt;#&lt;/a&gt; 产生路由表的算法&lt;/h6&gt;
+&lt;h3 id=&#34;图论抽象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图论抽象&#34;&gt;#&lt;/a&gt; 图论抽象&lt;/h3&gt;
+&lt;p&gt;Graph: G = &lt;strong&gt;(N,E)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;N&lt;/strong&gt; = set of routers = {u, v, w, x, y, z} 节点是&lt;strong&gt;路由器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;E&lt;/strong&gt; = set of links ={(u,v), (u,x), (v,x), (v,w), (x,w), (x,y), (w,y), (w,z), (y,z) }  边是&lt;strong&gt;物理链路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;链路开销 Cost of link：时延、费用或拥塞等级 路径开销 Cost of path：c (x1 , x2 , x3 ,…, xp) = c (x1 ,x2 ) + c (x2 ,x3 ) + … +  c (xp-1 ,xp )&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;路由算法&lt;/strong&gt;：找到开销最小的路径 (路由器序列)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分散式&lt;/strong&gt;算法 -- 只知道和部分路径，通过和邻居交换信息&lt;/p&gt;
+&lt;p&gt;典型就是下面这个算法&lt;/p&gt;
+&lt;h3 id=&#34;距离向量路由算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#距离向量路由算法&#34;&gt;#&lt;/a&gt; 距离向量路由算法&lt;/h3&gt;
+&lt;h4 id=&#34;描述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#描述&#34;&gt;#&lt;/a&gt; 描述&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;节点 x 维护距离向量&lt;/p&gt;
+&lt;p&gt;Dx=[dx (y): yєN ]&lt;br /&gt;
+(如果 y 不是 x 的邻居节点，则 dx (y)=∞, 否则 dx (y)= c (x,y))&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每个节点周期性向其邻居节点发送它自己的 距离向量，节点 x 保存其邻居节点的距离向量&lt;br /&gt;
+ Dv = [dv (y): y є N ]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;n 当节点 x 接收到来自邻居的 新距离向量，它使用 B-F 方程更新自己的 DV :&lt;br /&gt;
+Dx (y) ← minv {c(x,v) + Dv (y)} for each node y ∊ N&lt;br /&gt;
+Bellman-Ford 方程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;定义&lt;br /&gt;
+&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;d_x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.84444em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.151392em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; (y) = 从 x 到 y 的最小开销路径的开销，&lt;br /&gt;
+c (x,v) = 从 x 到邻居节点 v 的链路的开销&lt;/li&gt;
+&lt;li c(x,v)=&#34;&#34; +=&#34;&#34; dv=&#34;&#34; (y)=&#34;&#34;&gt;则 dx (y) = minv&lt;/li&gt;
+&lt;li&gt;取值最小的节点对应最短路径中的&lt;strong&gt;下一跳&lt;/strong&gt; (只有一个地址)➜ 转发表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	示例&lt;br /&gt;
+ &amp;lt; img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMi5sb2xpLm5ldC8yMDIxLzEyLzA5L0hoSUNHVWFrcWZ0MnptMS5wbmc=&#34;&gt;https://s2.loli.net/2021/12/09/HhICGUakqft2zm1.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20211122134953146&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;h3 id=&#34;链路状态路由算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链路状态路由算法&#34;&gt;#&lt;/a&gt; 链路状态路由算法・&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Discover its neighbors, learn their network address. &lt;strong&gt;发现邻居，学习它们的网络地址&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Measure the delay or cost to each of its neighbors. &lt;strong&gt;测量到每一个邻居的时延或开销&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Construct a packet (link state packet)telling all it has  just learned. &lt;strong&gt;构造一个分组 (链路状态分组) 来通 告其学习到的所有信息&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Send this packet to all other routers.  &lt;strong&gt;向所有路由器发送该分组&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Compute the shortest path to every other router.  &lt;strong&gt;计算到其他路由器的最短路径&lt;/strong&gt;&lt;br /&gt;
+使用 Dijkstra 算法计算最短路径&lt;br /&gt;
+ &amp;lt; img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMi5sb2xpLm5ldC8yMDIxLzEyLzA5L21DZEY0RzJ3Tzd2eHBVVy5wbmc=&#34;&gt;https://s2.loli.net/2021/12/09/mCdF4G2wO7vxpUW.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20211122143134224&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;路由协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#路由协议&#34;&gt;#&lt;/a&gt; 路由协议&lt;/h2&gt;
+&lt;p&gt;受到分组压力，单位需求的影响，产生了 as (自治系统)&lt;/p&gt;
+&lt;p&gt;系统内可以用之前的算法，系统外 --? 自治系统间专门的路由协议&lt;/p&gt;
+&lt;h3 id=&#34;openshortestpathfirst路由协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#openshortestpathfirst路由协议&#34;&gt;#&lt;/a&gt; O (pen) S (hortest) P (ath) F (irst) 路由协议&lt;/h3&gt;
+&lt;h5 id=&#34;自治系统内路由-开放最短路径优先&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#自治系统内路由-开放最短路径优先&#34;&gt;#&lt;/a&gt; 自治系统内路由 - 开放最短路径优先&lt;/h5&gt;
+&lt;h6 id=&#34;使用的算法是链路状态算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用的算法是链路状态算法&#34;&gt;#&lt;/a&gt; 使用的算法是&lt;strong&gt;链路状态算法&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;OSPF 的特点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安全性 -- 报文经过签名鉴别&lt;/li&gt;
+&lt;li&gt;使用多条开销相同的路径&lt;/li&gt;
+&lt;li&gt;对每条链路，为不同的服务类型设置多种开销度量&lt;/li&gt;
+&lt;li&gt;集成的单播和多播支持&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;层次ospf&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#层次ospf&#34;&gt;#&lt;/a&gt; 层次 ospf&lt;/h5&gt;
+&lt;p&gt;自治系统内进一步再分&lt;/p&gt;
+&lt;h3 id=&#34;bgp路由协议border-gateway-protocol&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bgp路由协议border-gateway-protocol&#34;&gt;#&lt;/a&gt; BGP 路由协议 (border gateway protocol)&lt;/h3&gt;
+&lt;h5 id=&#34;-自治系统间路由&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-自治系统间路由&#34;&gt;#&lt;/a&gt; - 自治系统间路由&lt;/h5&gt;
+&lt;p&gt;算法 - 距离向量算法 (改名 --- 路径向量算法)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;eBGP: Obtain subnet reachability information from&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;neighboring ASes. 从相邻 AS 获得子网可达性信息&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;iBGP: Propagate reachability information to all AS-internal&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;routers. 向 AS 内部的所有路由器传播可达性信息&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Determine “good” routes to subnets based on reachability&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;information and policy. 根据可达性信息和策略，决定到子网&lt;/p&gt;
+&lt;p&gt;的 “好” 路由&lt;/p&gt;
+&lt;h2 id=&#34;icmp-the-internet-control&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#icmp-the-internet-control&#34;&gt;#&lt;/a&gt; •ICMP-The Internet Control&lt;/h2&gt;
+&lt;p&gt;差错报告 -- 不可达网络 \ 主机 \ 端口 \ 协议&lt;/p&gt;
+&lt;p&gt;回声请求&lt;/p&gt;
+&lt;p&gt;trace route&lt;/p&gt;
+&lt;p&gt;源主机从 ttl=1, 一点点开始发送更大的 ttl, 目的端口号设置为一个不可能到达的端口，&lt;/p&gt;
+&lt;p&gt;当 ttl 超时时，该路由器发送一个 ICMP 报文到源主机，这样会获取路径上路由器的信息&lt;/p&gt;
+&lt;p&gt;到达目的主机后，会返回一个端口不可达报文，探测结束&lt;/p&gt;
+&lt;h2 id=&#34;message-protocol&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#message-protocol&#34;&gt;#&lt;/a&gt; Message Protocol&lt;/h2&gt;
+&lt;h2 id=&#34;网络管理snmp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络管理snmp协议&#34;&gt;#&lt;/a&gt; 网络管理 ——SNMP 协议&lt;/h2&gt;
+</content>
+        <category term="大三" scheme="http://example.com/categories/junior/" />
+        <category term="计算机网络" scheme="http://example.com/categories/junior/computernetwork/" />
+        <category term="网络层" scheme="http://example.com/tags/%E7%BD%91%E7%BB%9C%E5%B1%82/" />
+        <updated>2021-12-09T02:48:15.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/12/09/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/</id>
+        <title>数据链路层</title>
+        <link rel="alternate" href="http://example.com/2021/12/09/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/"/>
+        <content type="html">&lt;h1 id=&#34;12_2_数据链路层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12_2_数据链路层&#34;&gt;#&lt;/a&gt; 12_2_数据链路层&lt;/h1&gt;
+&lt;h2 id=&#34;1-数据链路层的基本功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-数据链路层的基本功能&#34;&gt;#&lt;/a&gt; 1. 数据链路层的基本功能&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;u&amp;gt; 将数据报从一个节点经过一条链路传输到相邻节点 &amp;lt;/u&amp;gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;组帧：将数据报封装进帧，加上首部和尾部&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链路接入：如果共享媒体，控制信道接入，使用帧首部中的 “MAC” 地址标识源和目的地&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相邻节点间的可靠交付，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检错&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;纠错：接收方识别并纠正比特差错，而不需要重传&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;它放在哪？适配器 (网卡), 和主机系统总线相连&lt;/p&gt;
+&lt;h2 id=&#34;2差错控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2差错控制&#34;&gt;#&lt;/a&gt; 2. 差错控制&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;通过通信信道接收的数据与发送的数据不一致的现象称为传输差错 (简称差错)。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;21检错编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21检错编码&#34;&gt;#&lt;/a&gt; 2.1 检错编码&lt;/h3&gt;
+&lt;h4 id=&#34;211单比特奇偶校验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#211单比特奇偶校验&#34;&gt;#&lt;/a&gt; 2.1.1 单比特奇偶校验&lt;/h4&gt;
+&lt;p&gt;奇偶校验码是一种通过增加冗余位使得码字中 “1” 的个数恒为奇数或偶数的编码方法&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/JEV1Ht24Sz6iWuk.png&#34; alt=&#34;image-20211202102617007&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;能力：能够检测单 (奇数) 个比特差错&lt;/p&gt;
+&lt;h4 id=&#34;212internetchecksum-udp里讲过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#212internetchecksum-udp里讲过&#34;&gt;#&lt;/a&gt; 2.1.2InternetChecksum--UDP 里讲过&lt;/h4&gt;
+&lt;h4 id=&#34;213循环冗余校验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#213循环冗余校验&#34;&gt;#&lt;/a&gt; 2.1.3 循环冗余校验&lt;/h4&gt;
+&lt;p&gt;原始数据：D&lt;/p&gt;
+&lt;p&gt;校验位：长度 r,&lt;/p&gt;
+&lt;p&gt;原始数据后补上 r 位 0,&lt;/p&gt;
+&lt;p&gt;Generator: G:r+1 的长度&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/ofx3QTMktbhvgzR.png&#34; alt=&#34;image-20211202103409058&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;D 不断异或 G (其实是求余数), 最后剩下的为校验位&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMi5sb2xpLm5ldC8yMDIxLzEyLzA5L0VzSUgxOVlLaGJTWFpxNy5wbmc=&#34;&gt;https://s2.loli.net/2021/12/09/EsIH19YKhbSXZq7.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20211202103258900&amp;quot; style=&amp;quot;zoom:33%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;检测能力&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/QD8Eu6FTqJRkfwx.png&#34; alt=&#34;image-20211202103444659&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;214二维奇偶校验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#214二维奇偶校验&#34;&gt;#&lt;/a&gt; 2.1.4 二维奇偶校验&lt;/h4&gt;
+&lt;p&gt;二维奇偶校验能够检测并纠正单比特差错&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/dsNAQDYEWB54bO6.png&#34; alt=&#34;image-20211202103521291&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;22纠错编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22纠错编码&#34;&gt;#&lt;/a&gt; 2.2 纠错编码&lt;/h3&gt;
+&lt;h2 id=&#34;3介质访问控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3介质访问控制&#34;&gt;#&lt;/a&gt; 3. 介质访问控制&lt;/h2&gt;
+&lt;p&gt;点对点 / 广播&lt;/p&gt;
+&lt;h3 id=&#34;31信道划分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#31信道划分&#34;&gt;#&lt;/a&gt; 3.1 信道划分&lt;/h3&gt;
+&lt;p&gt;将信道划分为较小的 “片” (时隙，频率，编码)&lt;/p&gt;
+&lt;p&gt;为节点分配专用的片&lt;/p&gt;
+&lt;h4 id=&#34;311频分多路复用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#311频分多路复用&#34;&gt;#&lt;/a&gt; 3.1.1 频分多路复用&lt;/h4&gt;
+&lt;h4 id=&#34;322时分多路复用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#322时分多路复用&#34;&gt;#&lt;/a&gt; 3.2.2 时分多路复用、&lt;/h4&gt;
+&lt;h4 id=&#34;313波分多路复用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#313波分多路复用&#34;&gt;#&lt;/a&gt; 3.1.3 波分多路复用&lt;/h4&gt;
+&lt;h4 id=&#34;314码分多路访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#314码分多路访问&#34;&gt;#&lt;/a&gt; 3.1.4 码分多路访问&lt;/h4&gt;
+&lt;h3 id=&#34;32随机访问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#32随机访问&#34;&gt;#&lt;/a&gt; 3.2 随机访问&lt;/h3&gt;
+&lt;p&gt;不划分信道，允许冲突&lt;/p&gt;
+&lt;p&gt;从 “冲突” 中恢复&lt;/p&gt;
+&lt;h4 id=&#34;321aloha协议-csma协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#321aloha协议-csma协议&#34;&gt;#&lt;/a&gt; 3.2.1ALOHA 协议、CSMA 协议、&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211202111307619.png&#34; alt=&#34;image-20211202111307619&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;传播时延的冲突:&lt;/p&gt;
+&lt;p&gt;传播时延：传输距离 / 光速&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/oRzjkmdAZTFytSf.png&#34; alt=&#34;image-20211202111802943&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;端到端往返时延 2t 称为争用期，或冲突窗口&lt;/p&gt;
+&lt;h4 id=&#34;322csmacd协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#322csmacd协议&#34;&gt;#&lt;/a&gt; 3.2.2CSMA/CD 协议&lt;/h4&gt;
+&lt;p&gt;需要在发送完帧之前就能收到自己发送出去的数据，即帧的传输时延至少是数据在总线中的传播时延的 2 倍&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;em&gt;最小帧长 = 传播时延&lt;/em&gt; 2 &lt;em&gt;数据传输速率&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;例如，以太网的冲突窗口长度为 51.2µs，数据传输速&lt;/p&gt;
+&lt;p&gt;率为 10Mbps，51.2µs 可以发送 512bit（64B）数据，因&lt;/p&gt;
+&lt;p&gt;此，64B 是以太网的最短帧长度；&lt;/p&gt;
+&lt;h4 id=&#34;csmaca协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#csmaca协议&#34;&gt;#&lt;/a&gt; 、CSMA/CA 协议&lt;/h4&gt;
+&lt;h3 id=&#34;33轮流协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#33轮流协议&#34;&gt;#&lt;/a&gt; 3.3 轮流协议&lt;/h3&gt;
+&lt;h4 id=&#34;331令牌传递协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#331令牌传递协议&#34;&gt;#&lt;/a&gt; 3.3.1 令牌传递协议&lt;/h4&gt;
+&lt;h4 id=&#34;332轮询协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#332轮询协议&#34;&gt;#&lt;/a&gt; 3.3.2 轮询协议&lt;/h4&gt;
+&lt;h2 id=&#34;4局域网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4局域网&#34;&gt;#&lt;/a&gt; 4. 局域网&lt;/h2&gt;
+&lt;h3 id=&#34;41局域网的基本概念与体系结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41局域网的基本概念与体系结构&#34;&gt;#&lt;/a&gt; 4.1 局域网的基本概念与体系结构&lt;/h3&gt;
+&lt;h3 id=&#34;42局域网寻址与arp协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#42局域网寻址与arp协议&#34;&gt;#&lt;/a&gt; 4.2 局域网寻址与 ARP 协议&lt;/h3&gt;
+&lt;h3 id=&#34;43以太网与ieee-8023&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#43以太网与ieee-8023&#34;&gt;#&lt;/a&gt; 4.3 以太网与 IEEE 802.3&lt;/h3&gt;
+&lt;h5 id=&#34;431以太网拓扑结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#431以太网拓扑结构&#34;&gt;#&lt;/a&gt; 4.3.1 以太网拓扑结构&lt;/h5&gt;
+&lt;p&gt;90 年代前：总线型拓扑 (单冲突域)&lt;/p&gt;
+&lt;p&gt;现在星形 (中心是交换机，节点之间不冲突，不需要 CSMA)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/MDJZpHrGhb3BewT.png&#34; alt=&#34;image-20211209100351905&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;4.3.2 以太网帧结构&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;4.3.3 以太网属性&lt;/p&gt;
+&lt;p&gt;•connectionless: no handshaking between sending and receiving NICs&lt;/p&gt;
+&lt;p&gt;连接之间没有握手&lt;/p&gt;
+&lt;p&gt;•unreliable: receiving NIC doesn&#39;t send ACKs or NAKs to sending NIC&lt;/p&gt;
+&lt;p&gt;就是说，如果没收到就直接扔了，不发消息&lt;/p&gt;
+&lt;p&gt;以太网的 MAC Control&lt;/p&gt;
+&lt;p&gt;CMSA/CD + 指数回避 (用来防止连续冲突)&lt;/p&gt;
+&lt;h3 id=&#34;44无线局域网ieee-80211&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#44无线局域网ieee-80211&#34;&gt;#&lt;/a&gt; 4.4 无线局域网 (IEEE 802.11)&lt;/h3&gt;
+&lt;p&gt;4.4.1 典型结构&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zMi5sb2xpLm5ldC8yMDIxLzEyLzA5LzZTRTkxbU1OQlZwcmdBaC5wbmc=&#34;&gt;https://s2.loli.net/2021/12/09/6SE91mMNBVprgAh.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20211209102241124&amp;quot; style=&amp;quot;zoom:33%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;4.4.2 冲突控制&lt;/p&gt;
+&lt;p&gt;CSMA/C(ollision)A(voidance)&lt;/p&gt;
+&lt;p&gt;允许发送端预订信道&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发送端发送请求帧到 AP&lt;/li&gt;
+&lt;li&gt;AP 广播允许发送 (CTS) 的回复&lt;/li&gt;
+&lt;li&gt;所有结点收到 CTS, 发送端发送&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5数据链路层设备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5数据链路层设备&#34;&gt;#&lt;/a&gt; 5. 数据链路层设备&lt;/h2&gt;
+&lt;h3 id=&#34;51局域网交换机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#51局域网交换机&#34;&gt;#&lt;/a&gt; 5.1 局域网交换机&lt;/h3&gt;
+&lt;p&gt;查看进入的 MAC 地址，然后转发给出链路&lt;/p&gt;
+&lt;p&gt;**&amp;lt;u&amp;gt; 透明 &amp;lt;/u&amp;gt;&lt;strong&gt; 因此在转发的时候分组里&lt;/strong&gt; &amp;lt;u&amp;gt; 不会 &amp;lt;/u&amp;gt;** 有交换机的物理地址&lt;/p&gt;
+&lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt; 自学习&lt;/strong&gt; &amp;lt;/u&amp;gt;:&lt;/p&gt;
+&lt;p&gt;收到对应接口分组后记录对应接口 MAC 地址在自己对应接口上&lt;/p&gt;
+&lt;p&gt;如果发现目的接口没有，会洪泛 (将分组分发到所有接口上，等待回复)&lt;/p&gt;
+&lt;p&gt;5.2 冲突域 vs 广播域&lt;/p&gt;
+&lt;p&gt;冲突域&lt;/p&gt;
+&lt;p&gt;当两个设备在同时发送分组的时候会冲突&lt;/p&gt;
+&lt;p&gt;下面每个圈都是冲突域&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/PYFwpzouJ9VhBre.png&#34; alt=&#34;image-20211209105458295&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;广播&lt;/p&gt;
+&lt;p&gt;通过广播能发到的一堆设备&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/l7OfskCEuRYMqb6.png&#34; alt=&#34;image-20211209105941059&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;虚拟局域网 (为了防止过多的广播信息引起不便)&lt;/p&gt;
+&lt;p&gt;虚拟局域网 VLAN 是由一些局域网网段构成的与物理位置无关的逻辑组&lt;/p&gt;
+&lt;p&gt;每一个 VLAN 的帧都有一个明确的标识符，指明发送这个帧的工作站是属于哪一个 VLAN。(在以太网帧中插入一个 4 字节的标识符，称为 VLAN 标记)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/09/ier7sUByQbkouxL.png&#34; alt=&#34;image-20211209110309425&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="大三" scheme="http://example.com/categories/junior/" />
+        <category term="计算机网络" scheme="http://example.com/categories/junior/computernetwork/" />
+        <category term="计网" scheme="http://example.com/tags/%E8%AE%A1%E7%BD%91/" />
+        <updated>2021-12-09T02:48:01.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2021/12/07/%E5%A4%8D%E4%B9%A0/</id>
         <title>21/12/6 软件体系结构复习</title>
@@ -388,6 +653,103 @@
         <category term="软件" scheme="http://example.com/categories/junior/software/" />
         <category term="软件体系结构" scheme="http://example.com/tags/%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" />
         <updated>2021-12-07T14:09:47.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/12/07/android%E4%B8%8E%E8%85%BE%E8%AE%AF%E4%BA%91mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5-windows/</id>
+        <title>未继续_android与腾讯云mysql数据库连接_windows</title>
+        <link rel="alternate" href="http://example.com/2021/12/07/android%E4%B8%8E%E8%85%BE%E8%AE%AF%E4%BA%91mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5-windows/"/>
+        <content type="html">&lt;p&gt;第一步&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;购买一个腾讯云服务&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/u7yYjh39kGZfp8X.png&#34; alt=&#34;image-20211207215535055&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;然后初始化 (请记住密码)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/UlmbJ9cSR8NHkAe.png&#34; alt=&#34;image-20211207221439709&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;开启外网地址 (不然怎么连&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/Tijutps6K3ZB1wg.png&#34; alt=&#34;image-20211207222027892&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第二步，下载 androidstudio&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/aAXyWbjZR6c2uht.png&#34; alt=&#34;image-20211207215837466&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;第三步，下载对应数据库版本的 jdbc, 我的腾讯云是 mysql8&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;jdbc 位置是&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubXlzcWwuY29tL3Byb2R1Y3RzL2Nvbm5lY3Rvci8=&#34;&gt;MySQL :: MySQL Connectors&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;打开之后长这样，下载 JDBC&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/UnWrX4BHD5PFTpR.png&#34; alt=&#34;image-20211207215936667&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;这儿选 platform independent, 然后点第二个下载&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211207220401699.png&#34; alt=&#34;image-20211207220401699&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;解压之后能看到这个东西&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211207220521395.png&#34; alt=&#34;image-20211207220521395&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;把上面那玩意引入 android&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;首先在 project 底下的 app 文件夹的子目录找到 libs 文件夹，把那个 jdbc 的 jar 包拖进去&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/Qupag1AD3JFYfB6.png&#34; alt=&#34;image-20211207221048176&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;如果没有，把左上角的这个调成 ProjectFiles 看看，还没有就自己新建一个&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s2.loli.net/2021/12/07/kJ6CrM37XSUsbQI.png&#34; alt=&#34;image-20211207221113280&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;右键它，选择 add as library&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cwww13%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20211207221300723.png&#34; alt=&#34;image-20211207221300723&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="大三" scheme="http://example.com/categories/junior/" />
+        <category term="失败" scheme="http://example.com/categories/junior/failed/" />
+        <category term="android" scheme="http://example.com/tags/android/" />
+        <updated>2021-12-07T13:54:50.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://example.com/2021/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</id>
+        <title>计算机网络复习</title>
+        <link rel="alternate" href="http://example.com/2021/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/"/>
+        <content type="html">&lt;ol&gt;
+&lt;li&gt;在内存中开辟一个虚拟磁盘空间作为文件存储器，在其上实现一个简单的单用户文件系统。在退出这个简单的文件系统时，将该虚拟文件系统保存到磁盘上，以便下次再将它恢复到内存的虚拟磁盘空间中。&lt;/li&gt;
+&lt;li&gt;提供以下操作：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;new：建立一个新的简单文件系统；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sfs：打开一个简单文件系统；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;exit：退出打开的简单文件系统；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mkdir：创建子目录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;rmdir：删除子目录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ls：显示目录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd：更改当前目录；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;create：创建文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;open：打开文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;close：关闭文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;read：读文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;write：写文件；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;delete：删除文件。&lt;/p&gt;
+&lt;p&gt;\3. 打包提交以下材料：实验报告（含处理流程）、源文件、可执行文件、使用说明。文件命名：学号 + 姓名 + 实验 4&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="大三" scheme="http://example.com/categories/junior/" />
+        <category term="计算机网络" scheme="http://example.com/categories/junior/computernetwork/" />
+        <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+        <updated>2021-12-07T05:10:23.000Z</updated>
     </entry>
     <entry>
         <id>http://example.com/2021/12/07/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</id>
