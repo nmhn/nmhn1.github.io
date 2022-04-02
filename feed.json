@@ -7,6 +7,26 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2022/04/02/202242%20%E5%AD%97%E8%8A%82%E4%BA%8C%E9%9D%A2%E8%AE%B0%E5%BD%95/",
+            "url": "http://example.com/2022/04/02/202242%20%E5%AD%97%E8%8A%82%E4%BA%8C%E9%9D%A2%E8%AE%B0%E5%BD%95/",
+            "title": "字节二面记录",
+            "date_published": "2022-04-02T12:01:01.000Z",
+            "content_html": "<h1 id=\"202242-字节二面记录\"><a class=\"anchor\" href=\"#202242-字节二面记录\">#</a> 2022/4/2 字节二面记录</h1>\n<blockquote>\n<p>啸问题：开头以为只有暑假可以实习，直接被面试官拒了，然后被同学提醒才发现开学也能实习，紧急联系回来了</p>\n<p>面试官还挺好的，居然还能继续面</p>\n</blockquote>\n<h2 id=\"问了些啥\"><a class=\"anchor\" href=\"#问了些啥\">#</a> 问了些啥</h2>\n<p>最开始还是最难顶的自我介绍，感觉像是一个垃圾桶被要求介绍自己 (x), 我下次应该记住重复一下北理是个 985, 不然听起来像个野鸡大学 (</p>\n<p>和一面不同的是，这回自我介绍完了就开始做题，还问了 python 里头元组和字典的关系 (答不出来，寄)</p>\n<p>计网方面问了 http 请求一个页面的过程 (上学期刚上完这学期就忘得差不多了属于是)</p>\n<p>这回没问数据库，不知道是为啥</p>\n<p>问了对软件项目管理的理解 (?), 我就当问我管理上的看法，感觉有点答非所问</p>\n<h2 id=\"哪里不行\"><a class=\"anchor\" href=\"#哪里不行\">#</a> 哪里不行</h2>\n<p>对语言的理解比较烂，属于是只知道用不知道学</p>\n<p>计网还是得看看 http 请求的全过程</p>\n<p>其实数据库查询语句还有点欠缺，不过能用</p>\n",
+            "tags": [
+                "面试"
+            ]
+        },
+        {
+            "id": "http://example.com/2022/04/02/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/",
+            "url": "http://example.com/2022/04/02/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/",
+            "title": "更新日志",
+            "date_published": "2022-04-02T12:00:01.000Z",
+            "content_html": "<h3 id=\"202242\"><a class=\"anchor\" href=\"#202242\">#</a> 2022/4/2</h3>\n<blockquote>\n<p>增加了一份面试记录</p>\n</blockquote>\n<h3 id=\"2022316\"><a class=\"anchor\" href=\"#2022316\">#</a> 2022/3/16</h3>\n<blockquote>\n<p>更新新学期内容和部分学习内容（REACT）</p>\n</blockquote>\n<h3 id=\"2021126\"><a class=\"anchor\" href=\"#2021126\">#</a> 2021/12/6</h3>\n<blockquote>\n<p>创建站</p>\n<p>链接评论服务</p>\n<p>更新域名 <span class=\"exturl\" data-url=\"aHR0cDovL25pYW5tZWlodWFpbmlhbi5jb20=\">nianmeihuainian.com</span></p>\n<p>更改主题</p>\n</blockquote>\n<h3 id=\"2021127\"><a class=\"anchor\" href=\"#2021127\">#</a> 2021/12/7</h3>\n<blockquote>\n<p>评论区恢复</p>\n<p>修改打赏图</p>\n<p>修改主题图片</p>\n<p>修复搜索功能</p>\n</blockquote>\n",
+            "tags": [
+                "log"
+            ]
+        },
+        {
             "id": "http://example.com/2022/03/16/React%E5%AD%A6%E4%B9%A020220314%20SetState/",
             "url": "http://example.com/2022/03/16/React%E5%AD%A6%E4%B9%A020220314%20SetState/",
             "title": "React学习20220314 SetState",
@@ -161,16 +181,6 @@
             ]
         },
         {
-            "id": "http://example.com/2021/12/07/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/",
-            "url": "http://example.com/2021/12/07/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/",
-            "title": "更新日志",
-            "date_published": "2021-12-07T04:51:32.000Z",
-            "content_html": "<h3 id=\"2021126\"><a class=\"anchor\" href=\"#2021126\">#</a> 2021/12/6</h3>\n<blockquote>\n<p>创建站</p>\n<p>链接评论服务</p>\n<p>更新域名 <span class=\"exturl\" data-url=\"aHR0cDovL25pYW5tZWlodWFpbmlhbi5jb20=\">nianmeihuainian.com</span></p>\n<p>更改主题</p>\n</blockquote>\n<h3 id=\"2021127\"><a class=\"anchor\" href=\"#2021127\">#</a> 2021/12/7</h3>\n<blockquote>\n<p>评论区恢复</p>\n<p>修改打赏图</p>\n<p>修改主题图片</p>\n<p>修复搜索功能</p>\n</blockquote>\n<h3 id=\"2022316\"><a class=\"anchor\" href=\"#2022316\">#</a> 2022/3/16</h3>\n<blockquote>\n<p>更新新学期内容和部分学习内容（REACT）</p>\n</blockquote>\n",
-            "tags": [
-                "log"
-            ]
-        },
-        {
             "id": "http://example.com/2021/12/07/%E5%A4%96%E8%AE%BE/",
             "url": "http://example.com/2021/12/07/%E5%A4%96%E8%AE%BE/",
             "title": "21/12/7 设备管理",
@@ -216,18 +226,6 @@
                 "大三",
                 "数据库",
                 "数据库,完整性"
-            ]
-        },
-        {
-            "id": "http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/",
-            "url": "http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/",
-            "title": "21/12/6 Database 数据库操作",
-            "date_published": "2021-12-06T14:09:47.000Z",
-            "content_html": "<h2 id=\"数据库\"><a class=\"anchor\" href=\"#数据库\">#</a> 数据库</h2>\n<p>select</p>\n<p>from</p>\n<p>where</p>\n<p>group by</p>\n<p>having</p>\n<p>order by</p>\n<h5 id=\"insert\"><a class=\"anchor\" href=\"#insert\">#</a> insert</h5>\n<p>指定属性列 -- 不包含的取空</p>\n<p>不指定 - 不能省略任何属性</p>\n",
-            "tags": [
-                "大三",
-                "数据库",
-                "数据库"
             ]
         }
     ]

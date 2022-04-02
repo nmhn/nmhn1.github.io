@@ -10,8 +10,61 @@
         </author>
         <description></description>
         <language>en</language>
-        <pubDate>Wed, 16 Mar 2022 11:48:15 +0800</pubDate>
-        <lastBuildDate>Wed, 16 Mar 2022 11:48:15 +0800</lastBuildDate>
+        <pubDate>Sat, 02 Apr 2022 20:01:01 +0800</pubDate>
+        <lastBuildDate>Sat, 02 Apr 2022 20:01:01 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/04/02/202242%20%E5%AD%97%E8%8A%82%E4%BA%8C%E9%9D%A2%E8%AE%B0%E5%BD%95/</guid>
+            <title>字节二面记录</title>
+            <link>http://example.com/2022/04/02/202242%20%E5%AD%97%E8%8A%82%E4%BA%8C%E9%9D%A2%E8%AE%B0%E5%BD%95/</link>
+            <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/" />
+            <pubDate>Sat, 02 Apr 2022 20:01:01 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;202242-字节二面记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#202242-字节二面记录&#34;&gt;#&lt;/a&gt; 2022/4/2 字节二面记录&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;啸问题：开头以为只有暑假可以实习，直接被面试官拒了，然后被同学提醒才发现开学也能实习，紧急联系回来了&lt;/p&gt;
+&lt;p&gt;面试官还挺好的，居然还能继续面&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;问了些啥&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问了些啥&#34;&gt;#&lt;/a&gt; 问了些啥&lt;/h2&gt;
+&lt;p&gt;最开始还是最难顶的自我介绍，感觉像是一个垃圾桶被要求介绍自己 (x), 我下次应该记住重复一下北理是个 985, 不然听起来像个野鸡大学 (&lt;/p&gt;
+&lt;p&gt;和一面不同的是，这回自我介绍完了就开始做题，还问了 python 里头元组和字典的关系 (答不出来，寄)&lt;/p&gt;
+&lt;p&gt;计网方面问了 http 请求一个页面的过程 (上学期刚上完这学期就忘得差不多了属于是)&lt;/p&gt;
+&lt;p&gt;这回没问数据库，不知道是为啥&lt;/p&gt;
+&lt;p&gt;问了对软件项目管理的理解 (?), 我就当问我管理上的看法，感觉有点答非所问&lt;/p&gt;
+&lt;h2 id=&#34;哪里不行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#哪里不行&#34;&gt;#&lt;/a&gt; 哪里不行&lt;/h2&gt;
+&lt;p&gt;对语言的理解比较烂，属于是只知道用不知道学&lt;/p&gt;
+&lt;p&gt;计网还是得看看 http 请求的全过程&lt;/p&gt;
+&lt;p&gt;其实数据库查询语句还有点欠缺，不过能用&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/04/02/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
+            <title>更新日志</title>
+            <link>http://example.com/2022/04/02/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
+            <category term="log" scheme="http://example.com/tags/log/" />
+            <pubDate>Sat, 02 Apr 2022 20:00:01 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;202242&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#202242&#34;&gt;#&lt;/a&gt; 2022/4/2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;增加了一份面试记录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2022316&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2022316&#34;&gt;#&lt;/a&gt; 2022/3/16&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新新学期内容和部分学习内容（REACT）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2021126&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2021126&#34;&gt;#&lt;/a&gt; 2021/12/6&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;创建站&lt;/p&gt;
+&lt;p&gt;链接评论服务&lt;/p&gt;
+&lt;p&gt;更新域名 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25pYW5tZWlodWFpbmlhbi5jb20=&#34;&gt;nianmeihuainian.com&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;更改主题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2021127&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2021127&#34;&gt;#&lt;/a&gt; 2021/12/7&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;评论区恢复&lt;/p&gt;
+&lt;p&gt;修改打赏图&lt;/p&gt;
+&lt;p&gt;修改主题图片&lt;/p&gt;
+&lt;p&gt;修复搜索功能&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2022/03/16/React%E5%AD%A6%E4%B9%A020220314%20SetState/</guid>
             <title>React学习20220314 SetState</title>
@@ -2373,32 +2426,6 @@ c (x,v) = 从 x 到邻居节点 v 的链路的开销&lt;/li&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2021/12/07/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</guid>
-            <title>更新日志</title>
-            <link>http://example.com/2021/12/07/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</link>
-            <category term="log" scheme="http://example.com/tags/log/" />
-            <pubDate>Tue, 07 Dec 2021 12:51:32 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;2021126&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2021126&#34;&gt;#&lt;/a&gt; 2021/12/6&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;创建站&lt;/p&gt;
-&lt;p&gt;链接评论服务&lt;/p&gt;
-&lt;p&gt;更新域名 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25pYW5tZWlodWFpbmlhbi5jb20=&#34;&gt;nianmeihuainian.com&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;更改主题&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;2021127&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2021127&#34;&gt;#&lt;/a&gt; 2021/12/7&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;评论区恢复&lt;/p&gt;
-&lt;p&gt;修改打赏图&lt;/p&gt;
-&lt;p&gt;修改主题图片&lt;/p&gt;
-&lt;p&gt;修复搜索功能&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;2022316&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2022316&#34;&gt;#&lt;/a&gt; 2022/3/16&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;更新新学期内容和部分学习内容（REACT）&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">http://example.com/2021/12/07/%E5%A4%96%E8%AE%BE/</guid>
             <title>21/12/7 设备管理</title>
             <link>http://example.com/2021/12/07/%E5%A4%96%E8%AE%BE/</link>
@@ -2901,26 +2928,6 @@ D 是&lt;strong&gt;持久性&lt;/strong&gt; (durable)：保证了事务完成后
 &lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt; 登记两条原则&lt;/strong&gt; &amp;lt;/u&amp;gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt;1. 登记次序严格按并行事物执行顺序&lt;/strong&gt; &amp;lt;/u&amp;gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt;2. 先写日志文件，后写数据库&lt;/strong&gt; &amp;lt;/u&amp;gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</guid>
-            <title>21/12/6 Database 数据库操作</title>
-            <link>http://example.com/2021/12/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/</link>
-            <category term="大三" scheme="http://example.com/categories/junior/" />
-            <category term="数据库" scheme="http://example.com/categories/junior/database/" />
-            <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
-            <pubDate>Mon, 06 Dec 2021 22:09:47 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据库&#34;&gt;#&lt;/a&gt; 数据库&lt;/h2&gt;
-&lt;p&gt;select&lt;/p&gt;
-&lt;p&gt;from&lt;/p&gt;
-&lt;p&gt;where&lt;/p&gt;
-&lt;p&gt;group by&lt;/p&gt;
-&lt;p&gt;having&lt;/p&gt;
-&lt;p&gt;order by&lt;/p&gt;
-&lt;h5 id=&#34;insert&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#insert&#34;&gt;#&lt;/a&gt; insert&lt;/h5&gt;
-&lt;p&gt;指定属性列 -- 不包含的取空&lt;/p&gt;
-&lt;p&gt;不指定 - 不能省略任何属性&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
